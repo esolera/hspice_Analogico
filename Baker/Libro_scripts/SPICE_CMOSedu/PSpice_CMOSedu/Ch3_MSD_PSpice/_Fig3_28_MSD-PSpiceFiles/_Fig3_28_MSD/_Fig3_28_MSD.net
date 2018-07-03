@@ -1,8 +1,0 @@
-* source _FIG3_28_MSD
-R_Rrc         RCFILT 0  100G TC=0,0 
-V_Bnoise1         RCFILT 0 DC 1/SQRT(1+(V(f)/1.592e6)_2  
-R_Rdig         DIGFILT 0  100G TC=0,0 
-V_Bnoise         DIGFILT 0 DC 1/SQRT(1+(V(f)/1.592e6)_2  
-I_Itime         N25098 0 DC -1  
-C_Ctime         N25098 0  1   
-R_Rtime         0 N25098  100G TC=0,0 

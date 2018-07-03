@@ -1,5 +1,0 @@
-* PSpice Model Editor - Version 16.6.0
-
-*$
-.model Diode D TT=10n Cjo=25f Rs=0
-*$

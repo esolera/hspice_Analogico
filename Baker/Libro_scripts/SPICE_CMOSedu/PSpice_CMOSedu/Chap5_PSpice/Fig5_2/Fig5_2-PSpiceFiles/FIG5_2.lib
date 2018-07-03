@@ -1,5 +1,0 @@
-* PSpice Model Editor - Version 16.6.0
-
-*$
-.model rmod RES RSH=500 TNOM=27 TC1=0.0024
-*$

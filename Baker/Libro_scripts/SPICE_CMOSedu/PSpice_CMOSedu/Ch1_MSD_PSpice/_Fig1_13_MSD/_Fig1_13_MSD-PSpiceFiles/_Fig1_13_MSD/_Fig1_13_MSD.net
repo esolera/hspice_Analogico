@@ -1,7 +1,0 @@
-* source _FIG1_13_MSD
-R_R2         VOUT N00779  5k TC=0,0 
-R_R3         VIN VOUT  5k TC=0,0 
-R_R1         0 N00779  50 TC=0,0 
-T_T1         VIN 0 N00779 0 Z0=50 TD=5ns  
-V_V1         VIN 0  
-+SIN 0 1 50Meg 0 0 0

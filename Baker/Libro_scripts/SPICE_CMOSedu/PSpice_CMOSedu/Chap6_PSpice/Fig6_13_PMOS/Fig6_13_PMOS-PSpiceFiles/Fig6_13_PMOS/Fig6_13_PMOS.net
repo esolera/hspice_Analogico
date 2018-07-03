@@ -1,7 +1,0 @@
-* source FIG6_13_PMOS
-M_M1         N03602 N03558 0 N03646 P_1u  
-+ L=1u  
-+ W=10u         
-V_VBS         N03646 0 DC 0  
-V_VSG         0 N03558 DC 0  
-V_VSD         0 N03602 DC 2  

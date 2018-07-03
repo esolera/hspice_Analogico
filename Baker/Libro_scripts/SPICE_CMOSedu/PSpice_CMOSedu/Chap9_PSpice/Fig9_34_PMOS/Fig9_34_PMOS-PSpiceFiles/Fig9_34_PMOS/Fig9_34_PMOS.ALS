@@ -1,6 +1,0 @@
-.ALIASES
-V_VBS           VBS(+=N04853 -=0 ) CN @FIG9_34_PMOS.Fig9_34_PMOS(sch_1):INS4831@SOURCE.VSRC.Normal(chips)
-V_VSD           VSD(+=0 -=N04813 ) CN @FIG9_34_PMOS.Fig9_34_PMOS(sch_1):INS4733@SOURCE.VSRC.Normal(chips)
-M_M1            M1(d=N04813 g=N04731 s=0 b=N04853 ) CN @FIG9_34_PMOS.Fig9_34_PMOS(sch_1):INS4763@BREAKOUT.MbreakP4.Normal(chips)
-V_VSG           VSG(+=0 -=N04731 ) CN @FIG9_34_PMOS.Fig9_34_PMOS(sch_1):INS4709@SOURCE.VSRC.Normal(chips)
-.ENDALIASES

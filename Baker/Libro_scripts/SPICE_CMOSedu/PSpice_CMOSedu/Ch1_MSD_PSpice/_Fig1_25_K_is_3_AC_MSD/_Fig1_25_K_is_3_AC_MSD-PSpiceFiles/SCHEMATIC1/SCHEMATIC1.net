@@ -1,5 +1,0 @@
-* source _FIG1_25_K_IS_3_AC_MSD
-V_V1         VIN 0 DC 0Vdc AC 1Vac 
-T_T1         VIN 0 N01364 0 Z0=50 TD=30ns  
-R_R1         0 N01364  50 TC=0,0 
-E_E1         VOUT 0 VIN N01364 1

@@ -1,7 +1,0 @@
-* source FIG9_29_PMOS
-V_VSG         0 N04041 DC 0 AC 1m 
-M_M1         N04015 N04041 0 N04132 P_1u  
-+ L=2u  
-+ W=30u         
-V_VSD         0 N04015 DC 2  
-V_VBS         N04132 0 DC 0  

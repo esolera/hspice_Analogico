@@ -1,8 +1,0 @@
-* source FIG10_19_NMOS
-M_M1         VOUT N03835 VIN 0 N_50n  
-+ L=50n  
-+ W=500n         
-V_VDD         N03835 0 DC 1  
-V_Vin         VIN 0  
-+PULSE 0 1 500p 0 0 1n 3n
-C_C1         VOUT 0  50f  TC=0,0 

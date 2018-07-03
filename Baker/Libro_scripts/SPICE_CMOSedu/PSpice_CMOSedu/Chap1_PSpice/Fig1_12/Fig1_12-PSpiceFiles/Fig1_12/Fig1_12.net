@@ -1,5 +1,0 @@
-* source FIG1_12
-V_Vin         VIN 0 DC 1  
-V_Vmeas         N00151 0 DC 0V  
-R_R1         VIN VOUT  1k TC=0,0 
-R_R2         N00151 VOUT  2k TC=0,0 

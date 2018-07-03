@@ -1,4 +1,0 @@
-* source EX8_11
-R_R1         0 VOUT  1k TC=0,0 
-V_Vs         VS 0 DC 0 AC 1 0
-G_G1         VOUT VS VOUT VS 1e-4

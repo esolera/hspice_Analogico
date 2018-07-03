@@ -1,5 +1,0 @@
-.ALIASES
-V_VSG           VSG(+=0 -=N03925 ) CN @FIG9_32_PMOS.Fig9_32_PMOS(sch_1):INS3875@SOURCE.VSRC.Normal(chips)
-M_M1            M1(d=N03987 g=N03925 s=0 b=0 ) CN @FIG9_32_PMOS.Fig9_32_PMOS(sch_1):INS3933@BREAKOUT.MbreakP4.Normal(chips)
-V_VSD           VSD(+=0 -=N03987 ) CN @FIG9_32_PMOS.Fig9_32_PMOS(sch_1):INS3903@SOURCE.VSRC.Normal(chips)
-.ENDALIASES

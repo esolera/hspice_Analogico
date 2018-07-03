@@ -1,5 +1,0 @@
-* source FIG1_28
-R_R1         VIN VOUT  1k TC=0,0 
-C_C1         0 VOUT  1p  TC=0,0 
-V_Vin         VIN 0  
-+PWL 0 0.5 3n 1 5n 1 5.5n 0 7n 0 

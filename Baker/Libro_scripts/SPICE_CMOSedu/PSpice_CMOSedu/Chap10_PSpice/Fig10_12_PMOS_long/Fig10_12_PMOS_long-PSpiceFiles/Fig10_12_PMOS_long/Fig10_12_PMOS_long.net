@@ -1,8 +1,0 @@
-* source FIG10_12_PMOS_LONG
-M_M1         VOUT VIN N03176 N03176 P_1u  
-+ L=1u  
-+ W=10u         
-C_C1         VOUT 0  50f IC=0 TC=0,0 
-V_VDD         N03176 0 DC 5  
-V_Vin         VIN 0  
-+PULSE 5 0 200p 100p 

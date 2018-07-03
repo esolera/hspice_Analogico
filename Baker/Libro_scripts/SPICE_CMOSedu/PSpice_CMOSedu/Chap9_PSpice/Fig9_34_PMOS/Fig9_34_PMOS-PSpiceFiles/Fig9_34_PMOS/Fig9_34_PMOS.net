@@ -1,7 +1,0 @@
-* source FIG9_34_PMOS
-V_VBS         N04853 0 DC 0  
-V_VSD         0 N04813 DC 100m  
-M_M1         N04813 N04731 0 N04853 P_50n  
-+ L=100n  
-+ W=5u         
-V_VSG         0 N04731 DC 350m AC 1 

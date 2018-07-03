@@ -1,7 +1,0 @@
-* source FIG9_33_PMOS
-V_VSD         0 N04408 DC 100m  
-M_M1         N04408 N04346 0 N04585 P_50n  
-+ L=100n  
-+ W=5u         
-V_VSG         0 N04346 DC 0  
-V_VBS         N04585 0 DC 0  

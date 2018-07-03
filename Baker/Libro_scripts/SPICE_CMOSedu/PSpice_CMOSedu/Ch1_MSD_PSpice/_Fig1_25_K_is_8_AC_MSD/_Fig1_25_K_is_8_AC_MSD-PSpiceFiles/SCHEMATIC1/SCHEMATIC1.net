@@ -1,5 +1,0 @@
-* source _FIG1_25_K_IS_8_AC_MSD
-V_V1         VIN 0 DC 0Vdc AC 1Vac 
-T_T1         VIN 0 N01748 0 Z0=50 TD=80ns  
-E_E1         VOUT 0 VIN N01748 1
-R_R1         0 N01748  50 TC=0,0 

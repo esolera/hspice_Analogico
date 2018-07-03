@@ -1,7 +1,0 @@
-* source NOISE_NMOS_50N
-V_VDS         N04725 0 DC 500m  
-V_VGS         N04492 0 DC 350m AC 1 
-M_M1         VD N04492 0 0 N_50n  
-+ L=100n  
-+ W=2.5u         
-G_G1         N04725 VD N04725 VD 1

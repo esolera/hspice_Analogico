@@ -1,4 +1,0 @@
-* source FIG1_10
-R_R1         1 2  1k TC=0,0 
-R_R2         0 2  2k TC=0,0 
-V_Vin         1 0 DC 1  

@@ -1,7 +1,0 @@
-* source TAB9_1_FTP
-V_VSG         0 N06555 DC 1.15 AC 1 
-V_VSD         0 N06561 DC 250m  
-M_M1         N06561 N06555 0 N06571 P_1u  
-+ L=2u  
-+ W=30u         
-V_VBS         N06571 0 DC 0  

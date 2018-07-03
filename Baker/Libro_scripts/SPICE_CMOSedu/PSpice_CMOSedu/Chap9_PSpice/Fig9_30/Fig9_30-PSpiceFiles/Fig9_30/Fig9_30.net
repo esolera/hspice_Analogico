@@ -1,7 +1,0 @@
-* source FIG9_30
-V_VGS         N04108 0 DC 0  
-M_M1         N04092 N04108 0 N04068 N_50n  
-+ L=100n  
-+ W=2.5u         
-V_VDS         N04092 0 DC 1  
-V_VSB         0 N04068 DC 0  

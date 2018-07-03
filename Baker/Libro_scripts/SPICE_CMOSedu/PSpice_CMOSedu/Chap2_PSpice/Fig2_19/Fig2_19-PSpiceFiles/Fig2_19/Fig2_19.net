@@ -1,5 +1,0 @@
-* source FIG2_19
-V_Vin         VIN 0  
-+PULSE 10 -10 10n 0.1n 0.1n 20n 40n
-D_D1         VD 0 Dtrr 
-R_R1         VIN VD  1k TC=0,0 

@@ -1,6 +1,0 @@
-* source FIG1_15
-G_U2_G1         VOUT 0 VM 0 1MEG
-R_U2_R1         0 VOUT  1 TC=0,0 
-V_Vin         VIN 0 DC 1  
-R_Rin         VIN VM  1k TC=0,0 
-R_Rf         VM VOUT  3k TC=0,0 

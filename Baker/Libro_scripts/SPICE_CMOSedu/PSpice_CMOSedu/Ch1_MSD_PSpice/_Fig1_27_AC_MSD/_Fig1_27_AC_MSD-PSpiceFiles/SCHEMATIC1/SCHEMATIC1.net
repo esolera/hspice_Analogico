@@ -1,6 +1,0 @@
-* source _FIG1_27_AC_MSD
-R_R1         0 N02801  50 TC=0,0 
-T_T1         N02801 0 VOUT 0 Z0=50 TD=10ns  
-V_V1         VIN 0 DC 0Vdc AC 1Vac 
-E_E1         VOUT 0 VIN N02897 1
-E_E2         N02897 0 0 N02801 .95

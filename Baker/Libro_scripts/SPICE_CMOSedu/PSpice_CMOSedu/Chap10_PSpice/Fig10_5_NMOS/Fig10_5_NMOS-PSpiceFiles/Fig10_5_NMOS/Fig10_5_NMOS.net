@@ -1,6 +1,0 @@
-* source FIG10_5_NMOS
-V_VGS         N00413 0 DC 0  
-V_VDS         N00401 0 DC 0  
-M_M1         N00401 N00413 0 0 N_1u  
-+ L=1u  
-+ W=10u         

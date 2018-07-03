@@ -1,7 +1,0 @@
-* source _FIG3_28_MSD_ALT
-E_Eadd1         VOADD1 0 VIN VOUT .1
-E_Eadd2         VOADD2 0 VOADD1 VOUTM 1
-E_Eneg         VOUTM 0 VOUT 0 -1
-T_T1         VOADD2 0 VOUT 0 Z0=50 TD=10n  
-R_R1         0 VOUT  50 TC=0,0 
-V_Vin         VIN 0 DC 0Vdc AC 1Vac 

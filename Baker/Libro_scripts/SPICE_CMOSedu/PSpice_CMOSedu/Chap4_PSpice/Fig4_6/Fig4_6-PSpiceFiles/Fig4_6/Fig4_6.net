@@ -1,9 +1,0 @@
-* source FIG4_6
-V_Vin         VIN 0  
-+PULSE 0 1 50p 
-X_poly_nosilicide         VIN VOUT1 0 TLUMP128 PARAMS: LEN=1000 R=200 L=0 G=0
-+  C=9e-18
-X_poly_silicide         VIN VOUT2 0 TLUMP128 PARAMS: LEN=1000 R=5 L=0 G=0
-+  C=9e-18
-R_Rload1         0 VOUT1  1G TC=0,0 
-R_Rload2         0 VOUT2  1G TC=0,0 

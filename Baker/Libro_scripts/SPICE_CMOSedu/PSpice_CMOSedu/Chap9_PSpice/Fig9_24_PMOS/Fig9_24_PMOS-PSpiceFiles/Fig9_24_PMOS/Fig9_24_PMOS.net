@@ -1,6 +1,0 @@
-* source FIG9_24_PMOS
-V_VSG         0 N03812 DC 1.15 AC 1m 
-V_VSD         0 N03300 DC 5  
-M_M1         N03300 N03812 0 0 P_1u  
-+ L=2u  
-+ W=30u         

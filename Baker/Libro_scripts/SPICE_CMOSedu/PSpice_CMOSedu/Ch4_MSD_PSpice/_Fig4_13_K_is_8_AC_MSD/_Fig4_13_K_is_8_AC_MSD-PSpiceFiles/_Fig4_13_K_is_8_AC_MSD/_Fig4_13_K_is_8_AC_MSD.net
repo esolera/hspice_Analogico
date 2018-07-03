@@ -1,9 +1,0 @@
-* source _FIG4_13_K_IS_8_AC_MSD
-T_T2         N26270 0 VOUT 0 Z0=50 TD=10n  
-R_R1         0 N26260  50 TC=0,0 
-E_E2         VOUT 0 N26286 N26296 1
-E_E3         N26296 0 0 N26270 1
-E_E1         N26286 0 VIN N26260 1
-T_T1         VIN 0 N26260 0 Z0=50 TD=80n  
-R_R2         0 N26270  50 TC=0,0 
-V_V1         VIN 0 DC 0Vdc AC 1Vac 

@@ -1,8 +1,0 @@
-* source FIG10_14
-C_C1         VOUT 0  5f  TC=0,0 
-M_M1         VOUT N03499 VIN 0 N_50n  
-+ L=50n  
-+ W=500n         
-V_Vin         VIN 0  
-+PULSE 0 1 0 0 0 1n 2n
-V_VDD         N03499 0 DC 1  

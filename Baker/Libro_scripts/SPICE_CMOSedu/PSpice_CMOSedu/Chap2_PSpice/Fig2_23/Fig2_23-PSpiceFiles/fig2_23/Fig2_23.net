@@ -1,5 +1,0 @@
-* source FIG2_23
-V_Vin         VIN 0  
-+PULSE 0 1 5n 10p 
-R_Rload         0 VOUT  1G TC=0,0 
-X_TRC         VIN VOUT 0 TLUMP128 PARAMS: LEN=50 R=5k L=0 G=0 C=5f

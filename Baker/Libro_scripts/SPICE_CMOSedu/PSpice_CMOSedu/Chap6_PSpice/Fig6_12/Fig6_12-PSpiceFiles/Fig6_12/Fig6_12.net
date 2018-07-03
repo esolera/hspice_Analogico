@@ -1,6 +1,0 @@
-* source FIG6_12
-M_M1         N03176 N03116 0 0 P_1u  
-+ L=1u  
-+ W=10u         
-V_VSD         0 N03176 DC 0  
-V_VSG         0 N03116 DC 0  

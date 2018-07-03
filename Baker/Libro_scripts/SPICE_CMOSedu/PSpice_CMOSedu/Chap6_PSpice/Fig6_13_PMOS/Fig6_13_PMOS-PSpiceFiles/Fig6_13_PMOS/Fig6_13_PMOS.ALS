@@ -1,6 +1,0 @@
-.ALIASES
-M_M1            M1(d=N03602 g=N03558 s=0 b=N03646 ) CN @FIG6_13_PMOS.Fig6_13_PMOS(sch_1):INS3560@BREAKOUT.MbreakP4.Normal(chips)
-V_VBS           VBS(+=N03646 -=0 ) CN @FIG6_13_PMOS.Fig6_13_PMOS(sch_1):INS3624@SOURCE.VSRC.Normal(chips)
-V_VSG           VSG(+=0 -=N03558 ) CN @FIG6_13_PMOS.Fig6_13_PMOS(sch_1):INS3502@SOURCE.VSRC.Normal(chips)
-V_VSD           VSD(+=0 -=N03602 ) CN @FIG6_13_PMOS.Fig6_13_PMOS(sch_1):INS3522@SOURCE.VSRC.Normal(chips)
-.ENDALIASES
