@@ -1,0 +1,4 @@
+* source EX8_12
+V_Vs         VS 0 DC 1.7  
+R_Rs         VOUT VS  1k TC=0,0 
+D_D1         VOUT 0 Diode 

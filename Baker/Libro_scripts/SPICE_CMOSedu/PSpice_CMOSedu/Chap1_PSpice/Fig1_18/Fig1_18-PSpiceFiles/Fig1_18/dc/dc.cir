@@ -1,0 +1,21 @@
+** Profile: "Fig1_18-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_18\fig1_18-pspicefiles\fig1_18\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig1_18-pspicefiles/Fig1_18.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 5 1m 
++ LIN I_Ib 5u 25u 5u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig1_18.net" 
+
+
+.END

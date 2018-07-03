@@ -1,0 +1,5 @@
+* source EX8_14
+V_Vin         N02512 0 DC 0  
+R_R1         N02512 N02516  10k TC=0,0 
+C_C1         N02516 VOUT  10p  TC=0,0 
+E_E1         VOUT 0 0 N02516 100MEG

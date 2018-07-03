@@ -1,0 +1,87 @@
+
+**** 06/29/13 11:04:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_18-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_18\Ex8_18-pspicefiles\Ex8_18\noise.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "noise.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 1000G
+.NOISE V([VOUT],[0]) V_Vplus 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Ex8_18.net" 
+
+
+
+**** INCLUDING Ex8_18.net ****
+* source EX8_18
+V_Vplus         N03309 0 DC 0  
+R_R1         N03248 VOUT  100k TC=0,0 
+E_E1         VOUT 0 N03309 N03248 100MEG
+C_C1         N03248 VOUT  1000p  TC=0,0 
+
+**** RESUMING noise.cir ****
+.END
+
+**** 06/29/13 11:04:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_18-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_18\Ex8_18-pspicefiles\Ex8_18\noise.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VOUT)    0.0000  (N03248)    0.0000 (N03309)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vplus      0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/29/13 11:04:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_18-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_18\Ex8_18-pspicefiles\Ex8_18\noise.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

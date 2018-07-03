@@ -1,0 +1,7 @@
+* source FIG1_31
+V_Vin         VIN 0 DC 5V AC 0 0
+R_R1         N00129 VOUT  1k TC=0,0 
+R_R2         0 VOUT  1k TC=0,0 
+L_L1         VOUT 0  10uH IC=5m 
+X_U1         VIN N00129 Sw_tOpen PARAMS: tOpen=2n ttran=1p Rclosed=0.01
++  Ropen=1Meg

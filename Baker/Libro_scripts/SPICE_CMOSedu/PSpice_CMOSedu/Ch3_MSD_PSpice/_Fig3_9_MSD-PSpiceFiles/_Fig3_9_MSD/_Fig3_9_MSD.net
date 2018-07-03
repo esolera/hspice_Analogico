@@ -1,0 +1,19 @@
+* source _FIG3_9_MSD
+R_RFT         VOUTM N01314  10k TC=0,0 
+R_RIB         VINM N01298  10k TC=0,0 
+R_RIT         VINP N01314  10k TC=0,0 
+R_RFB         VOUTP N01298  10k TC=0,0 
+V_Vinp         VINP 0 DC .5Vdc AC .5Vac 
+V_Vinm         VINM 0 DC .5Vdc AC -.5Vac 
+C_C1         N01314 VOUTM  10p  TC=0,0 
+C_C2         N01298 VOUTP  10p  TC=0,0 
+V_VCM         VCM 0 DC .5  
+E_U1_E1         U1_N03437 U1_N03443 N01298 N01314 1e4
+E_U1_E5         VOUTP 0 U1_N03463 0 1
+C_U1_C1         0 U1_N03427  159n  TC=0,0 
+E_U1_E2         U1_N03443 U1_N03431 N01298 N01314 1e4
+C_U1_C2         U1_N03463 0  159n  TC=0,0 
+E_U1_E3         U1_N03443 0 VCM 0 1
+R_U1_R1         U1_N03437 U1_N03427  1k TC=0,0 
+R_U1_R2         U1_N03431 U1_N03463  1k TC=0,0 
+E_U1_E4         VOUTM 0 U1_N03427 0 1

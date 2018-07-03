@@ -1,0 +1,5 @@
+* source EX8_18
+V_Vplus         N03309 0 DC 0  
+R_R1         N03248 VOUT  100k TC=0,0 
+E_E1         VOUT 0 N03309 N03248 100MEG
+C_C1         N03248 VOUT  1000p  TC=0,0 

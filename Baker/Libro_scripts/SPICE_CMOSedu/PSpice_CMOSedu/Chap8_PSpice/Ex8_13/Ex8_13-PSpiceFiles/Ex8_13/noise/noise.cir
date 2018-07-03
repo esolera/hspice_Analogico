@@ -1,0 +1,21 @@
+** Profile: "Ex8_13-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_13\Ex8_13-pspicefiles\Ex8_13\noise.sim ] 
+
+** Creating circuit file "noise.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Ex8_13-pspicefiles/Ex8_13.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 100G
+.NOISE V([VOUT],[0]) V_Vs 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Ex8_13.net" 
+
+
+.END

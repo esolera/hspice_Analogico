@@ -1,0 +1,106 @@
+
+**** 06/29/13 11:04:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_13-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_13\Ex8_13-pspicefiles\Ex8_13\noise.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "noise.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Ex8_13-pspicefiles/Ex8_13.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 100G
+.NOISE V([VOUT],[0]) V_Vs 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Ex8_13.net" 
+
+
+
+**** INCLUDING Ex8_13.net ****
+* source EX8_13
+R_R1         VOUT VS  1k TC=0,0 
+D_D1         0 VOUT Diode 
+V_Vs         VS 0 DC 1.7 AC 0 
+
+**** RESUMING noise.cir ****
+.END
+
+**** 06/29/13 11:04:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_13-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_13\Ex8_13-pspicefiles\Ex8_13\noise.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Diode           
+          IS   10.000000E-15 
+          TT   10.000000E-09 
+         CJO   25.000000E-15 
+
+
+**** 06/29/13 11:04:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_13-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_13\Ex8_13-pspicefiles\Ex8_13\noise.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VS)    1.7000  ( VOUT)    1.7000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vs        -1.710E-12
+
+    TOTAL POWER DISSIPATION   2.91E-12  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/29/13 11:04:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Ex8_13-noise"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_13\Ex8_13-pspicefiles\Ex8_13\noise.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

@@ -1,0 +1,86 @@
+*** Figure 28.25 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vin vout
+
+Vclock N011 0 PULSE(0 1 5n 100p 100p 4.9n 10n)
+VDD VDD 0 1
+Vin Vin 0 SINE(0.5 0.5 60MEG 0)
+XX3 N010 N009 N008 N007 N006 N005 N004 N003 N002 N001 Vin VDD 0 N011 VDD ideal_10_bit_adc
+XX1 N010 N009 N008 N007 N006 N005 N004 N003 N002 N001 Vout VDD 0 VDD ideal_10_bit_dac
+
+* block symbol definitions
+.subckt ideal_10_bit_adc B0 B1 B2 B3 B4 B5 B6 B7 B8 B9 Vin Vrefp Vrefm Clock VDD
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+B1 VCM 0 V=(V(VREFP)-V(VREFM))/2
+BPIP PIPIN 0 V=V(OUTSH)-V(VREFM)+((V(VREFP)-V(VREFM))/2048)
+XU2 VDD Vtrip VCM N001 B7 N003 adcbit
+XU3 VDD Vtrip VCM N003 B6 N005 adcbit
+XU4 VDD Vtrip VCM N005 B5 N008 adcbit
+XU5 VDD Vtrip VCM N008 B4 N002 adcbit
+XU1 VDD Vtrip VCM N002 B3 N004 adcbit
+XU7 VDD Vtrip VCM N004 B2 N006 adcbit
+XU8 VDD Vtrip VCM N006 B1 N009 adcbit
+XU9 VDD Vtrip VCM N009 B0 NC_01 adcbit
+XU10 Vin OUTSH clock VDD sample_and_hold
+XU12 VDD Vtrip VCM PIPIN B9 N007 adcbit
+XU13 VDD Vtrip VCM N007 B8 N001 adcbit
+.ends ideal_10_bit_adc
+
+.subckt ideal_10_bit_dac B0 B1 B2 B3 B4 B5 B6 B7 B8 B9 Vout Vrefp Vrefm VDD
+S1 B7L Vone B7 Vtrip switmod
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+S2 0 B7L Vtrip B7 switmod
+S3 B6L Vone B6 Vtrip switmod
+S4 0 B6L Vtrip B6 switmod
+S5 B3L Vone B3 Vtrip switmod
+S6 0 B3L Vtrip B3 switmod
+S7 B2L Vone B2 Vtrip switmod
+S8 0 B2L Vtrip B2 switmod
+S9 B5L Vone B5 Vtrip switmod
+S10 0 B5L Vtrip B5 switmod
+S11 B4L Vone B4 Vtrip switmod
+S12 0 B4L Vtrip B4 switmod
+S13 B1L Vone B1 Vtrip switmod
+S14 0 B1L Vtrip B1 switmod
+S15 B0L Vone B0 Vtrip switmod
+S16 0 B0L Vtrip B0 switmod
+B1 Vout 0 V=((v(vrefp)-v(vrefm))/1024)*(v(B9L)*512+v(B8L)*256+v(B7L)*128+v(B6L)*64+ +v(B5L)*32+v(B4L)*16+v(B3L)*8+v(B2L)*4+v(B1L)*2+v(B0L))+v(vrefm)
+R3 Vrefp Vrefm 100MEG
+S21 B9L Vone B9 Vtrip switmod
+S22 0 B9L Vtrip B9 switmod
+S23 B8L Vone B8 Vtrip switmod
+S24 0 B8L Vtrip B8 switmod
+Vone Vone 0 1
+.model switmod SW
+.ends ideal_10_bit_dac
+
+.subckt adcbit VDD Vtrip VCM Vin Bitout Vout
+S3 Bitout VDD Vin VCM switmod
+S4 0 Bitout VCM Vin switmod
+S5 Vout Vinh Bitout Vtrip switmod
+S6 Vinl Vout Vtrip Bitout switmod
+E1 Vinh 0 Vin VCM 2
+E2 Vinl 0 Vin 0 2
+.model switmod SW
+.ends adcbit
+
+.subckt sample_and_hold Vin Outsh Clock VDD
+S1 Vins Vinb Vtrip Clock switmod
+C1 Vins 0 1e-10
+S2 N001 Vins clock Vtrip switmod
+C2 N001 0 1e-16
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+Ebufout Outsh 0 N001 0 1
+Ebufin Vinb 0 Vin 0 1
+.model switmod SW
+.ends sample_and_hold
+
+.tran 0 200n 0 .1n uic
+.options plotwinsize=0
+
+.end

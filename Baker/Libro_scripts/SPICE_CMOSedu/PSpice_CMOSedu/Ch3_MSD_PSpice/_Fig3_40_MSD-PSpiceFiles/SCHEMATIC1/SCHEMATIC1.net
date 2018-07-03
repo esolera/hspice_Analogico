@@ -1,0 +1,5 @@
+* source _FIG3_40_MSD
+R_R1         N00163 VOUT  707 TC=0,0 
+L_L1         VOUT 0  100u  
+C_C1         VOUT 0  100p   
+V_V1         N00163 0 DC 0Vdc AC 1Vac 

@@ -1,0 +1,85 @@
+
+**** 06/29/13 10:16:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig 1_19-ac"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_19\fig1_19-pspicefiles\fig 1_19\ac.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ac.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100n 0 100p 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig 1_19.net" 
+
+
+
+**** INCLUDING "Fig 1_19.net" ****
+* source FIG1_19
+R_R1         VIN VOUT  1k TC=0,0 
+R_R2         0 VOUT  2k TC=0,0 
+V_V1         VIN 0 DC 1  
+
+**** RESUMING ac.cir ****
+.END
+
+**** 06/29/13 10:16:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig 1_19-ac"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_19\fig1_19-pspicefiles\fig 1_19\ac.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    1.0000  ( VOUT)     .6667  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.333E-04
+
+    TOTAL POWER DISSIPATION   3.33E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/29/13 10:16:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig 1_19-ac"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_19\fig1_19-pspicefiles\fig 1_19\ac.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

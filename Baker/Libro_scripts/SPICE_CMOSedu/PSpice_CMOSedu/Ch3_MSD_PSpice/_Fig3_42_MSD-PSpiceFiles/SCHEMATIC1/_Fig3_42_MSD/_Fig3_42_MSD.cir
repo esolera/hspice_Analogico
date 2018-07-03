@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-_Fig3_42_MSD"  [ C:\Users\Christian\Desktop\MSD\Ch3_MSD_Pspice\_Fig3_42_MSD\_fig3_42_msd-pspicefiles\schematic1\_fig3_42_msd.sim ] 
+
+** Creating circuit file "_Fig3_42_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1k 100meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

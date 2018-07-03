@@ -1,0 +1,97 @@
+
+**** 06/28/13 10:31:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig1_18-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_18\fig1_18-pspicefiles\fig1_18\dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig1_18-pspicefiles/Fig1_18.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 5 1m 
++ LIN I_Ib 5u 25u 5u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig1_18.net" 
+
+
+
+**** INCLUDING Fig1_18.net ****
+* source FIG1_18
+I_Ib         0 VB DC 0  
+V_V1         VCE 0 DC 0  
+Q_Q1         VCE VB 0 myNPN 
+
+**** RESUMING dc.cir ****
+.END
+
+**** 06/28/13 10:31:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig1_18-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_18\fig1_18-pspicefiles\fig1_18\dc.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               myNPN           
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  100            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+
+          JOB CONCLUDED
+
+**** 06/28/13 10:31:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig1_18-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_18\fig1_18-pspicefiles\fig1_18\dc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .22
+

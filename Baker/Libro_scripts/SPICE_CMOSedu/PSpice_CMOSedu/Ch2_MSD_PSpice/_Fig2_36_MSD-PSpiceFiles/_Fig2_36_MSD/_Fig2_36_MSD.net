@@ -1,0 +1,62 @@
+* source _FIG2_36_MSD
+V_Vin         VIN 0  
++SIN .5 .5 1.59Meg 0 0 0
+V_Vphi1         PHI1 0  
++PULSE 0 1 0 200p 200p 4n 10n
+V_VDD         VDD 0 DC 1  
+C_CI         0 N01305  1p  TC=0,0 
+C_CI1         0 N01823  1p  TC=0,0 
+C_CF         0 N01291  10p  TC=0,0 
+V_Vphi2         PHI2 0  
++PULSE 0 1 5n 200p 200p 4n 10n
+V_VCM         VCM 0 DC .5  
+C_CF1         0 N01793  10p  TC=0,0 
+C_C1         0 VOUT  10f  TC=0,0 
+X_U1_S1    PHI1 U1_VTRIP VIN N01305 switches_2_U1_S1 
+R_U1_R1         0 U1_VTRIP  100Meg TC=0,0 
+R_U1_R2         U1_VTRIP VDD  100Meg TC=0,0 
+X_U1_S2    PHI2 U1_VTRIP N01305 N01291 switches_2_U1_S2 
+X_U2_S1    PHI1 U2_VTRIP VIN N01823 switches_2_U2_S1 
+R_U2_R1         0 U2_VTRIP  100Meg TC=0,0 
+R_U2_R2         U2_VTRIP VDD  100Meg TC=0,0 
+X_U2_S2    PHI2 U2_VTRIP N01823 N01793 switches_2_U2_S2 
+X_U3_S1    PHI1 U3_VTRIP N01291 VOUT switches_2_U3_S1 
+R_U3_R1         0 U3_VTRIP  100Meg TC=0,0 
+R_U3_R2         U3_VTRIP VDD  100Meg TC=0,0 
+X_U3_S2    PHI2 U3_VTRIP VOUT N01793 switches_2_U3_S2 
+
+.subckt switches_2_U1_S1 1 2 3 4  
+S_U1_S1         3 4 1 2 _U1_S1
+RS_U1_S1         1 2 1G
+.MODEL         _U1_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e.3 Von=1e-3
+.ends switches_2_U1_S1
+
+.subckt switches_2_U1_S2 1 2 3 4  
+S_U1_S2         3 4 1 2 _U1_S2
+RS_U1_S2         1 2 1G
+.MODEL         _U1_S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switches_2_U1_S2
+
+.subckt switches_2_U2_S1 1 2 3 4  
+S_U2_S1         3 4 1 2 _U2_S1
+RS_U2_S1         1 2 1G
+.MODEL         _U2_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e.3 Von=1e-3
+.ends switches_2_U2_S1
+
+.subckt switches_2_U2_S2 1 2 3 4  
+S_U2_S2         3 4 1 2 _U2_S2
+RS_U2_S2         1 2 1G
+.MODEL         _U2_S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switches_2_U2_S2
+
+.subckt switches_2_U3_S1 1 2 3 4  
+S_U3_S1         3 4 1 2 _U3_S1
+RS_U3_S1         1 2 1G
+.MODEL         _U3_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e.3 Von=1e-3
+.ends switches_2_U3_S1
+
+.subckt switches_2_U3_S2 1 2 3 4  
+S_U3_S2         3 4 1 2 _U3_S2
+RS_U3_S2         1 2 1G
+.MODEL         _U3_S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switches_2_U3_S2

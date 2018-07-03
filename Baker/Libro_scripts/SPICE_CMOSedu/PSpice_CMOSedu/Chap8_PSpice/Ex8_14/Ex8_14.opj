@@ -1,0 +1,67 @@
+(ExpressProject "Ex8_14"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\Ex8_14.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\Ex8_14-pspicefiles\Ex8_14\Ex8_14.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\Ex8_14-pspicefiles\Ex8_14\noise.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\Ex8_14-pspicefiles\Ex8_14\noise.sim"
+        (DisplayName "Ex8_14-noise")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndEx "0"))
+    (E
+      (FullPartName "E.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndEx "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndEx "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndEx "0"))
+    (VSRC
+      (FullPartName "VSRC.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndEx "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_14\Ex8_14.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_14\Ex8_14.dsn"
+         "Ex8_14")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_14\Ex8_14.dsn"
+         "Ex8_14" "Ex8_14"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 476"))
+      (Tab 0)))
+  (MPSSessionName "jbaker"))

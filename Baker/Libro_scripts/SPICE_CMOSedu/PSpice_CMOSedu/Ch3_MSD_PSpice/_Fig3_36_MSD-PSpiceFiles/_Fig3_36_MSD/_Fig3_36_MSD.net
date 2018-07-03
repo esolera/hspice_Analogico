@@ -1,0 +1,5 @@
+* source _FIG3_36_MSD
+R_R1         VIN N00101  1.414k TC=0,0 
+L_L1         N00101 VOUT  100uH  
+C_C1         VOUT 0  100p   
+V_V1         VIN 0 DC 0Vdc AC 1Vac 

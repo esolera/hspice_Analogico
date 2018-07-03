@@ -1,0 +1,27 @@
+* source _FIG5_8_MSD
+X_U1_S2    N44248 U1_VTRIP U1_VINS U1_N03327 Sample_and_hold_U1_S2 
+E_U1_Ebufin         0 U1_VINB 0 VIN 1
+R_U1_R1         U1_VTRIP N44307  100Meg TC=0,0 
+C_U1_C1         0 U1_VINS  1e-10  TC=0,0 
+E_U1_Ebufout         0 N44254 0 U1_N03327 1
+R_U1_R2         0 U1_VTRIP  100Meg TC=0,0 
+C_U1_C2         0 U1_N03327  1e-16  TC=0,0 
+X_U1_S1    U1_VTRIP N44248 U1_VINB U1_VINS Sample_and_hold_U1_S1 
+E_E1         VOUT 0 N44254 VIN 1
+V_Vclock         N44248 0  
++PULSE 0 1 0 0 0 4.9n 10n
+V_VDD         N44307 0 DC 1  
+V_Vin         VIN 0  
++SIN .5 .4 3MEG 0 0 0
+
+.subckt Sample_and_hold_U1_S2 1 2 3 4  
+S_U1_S2         3 4 1 2 _U1_S2
+RS_U1_S2         1 2 1G
+.MODEL         _U1_S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends Sample_and_hold_U1_S2
+
+.subckt Sample_and_hold_U1_S1 1 2 3 4  
+S_U1_S1         3 4 1 2 _U1_S1
+RS_U1_S1         1 2 1G
+.MODEL         _U1_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends Sample_and_hold_U1_S1

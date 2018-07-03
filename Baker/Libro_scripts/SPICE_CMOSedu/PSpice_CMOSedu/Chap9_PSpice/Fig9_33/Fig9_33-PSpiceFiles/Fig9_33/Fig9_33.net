@@ -1,0 +1,7 @@
+* source FIG9_33
+V_VDS         N03180 0 DC 100m  
+V_VGS         N03196 0 DC 0  
+M_M1         N03180 N03196 0 N03279 N_50n  
++ L=100n  
++ W=2.5u         
+V_VSB         0 N03279 DC 0  

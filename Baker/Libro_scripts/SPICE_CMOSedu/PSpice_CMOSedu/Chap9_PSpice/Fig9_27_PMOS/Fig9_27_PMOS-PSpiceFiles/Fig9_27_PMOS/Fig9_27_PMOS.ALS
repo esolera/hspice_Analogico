@@ -1,0 +1,5 @@
+.ALIASES
+M_M1            M1(d=N03731 g=N03675 s=0 b=0 ) CN @FIG9_27_PMOS.Fig9_27_PMOS(sch_1):INS3677@BREAKOUT.MbreakP4.Normal(chips)
+V_VSD           VSD(+=0 -=N03731 ) CN @FIG9_27_PMOS.Fig9_27_PMOS(sch_1):INS3639@SOURCE.VSRC.Normal(chips)
+V_VSG           VSG(+=0 -=N03675 ) CN @FIG9_27_PMOS.Fig9_27_PMOS(sch_1):INS3619@SOURCE.VSRC.Normal(chips)
+.ENDALIASES

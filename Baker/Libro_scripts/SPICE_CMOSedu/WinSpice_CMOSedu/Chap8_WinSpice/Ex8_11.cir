@@ -1,0 +1,13 @@
+*** Example 8.11 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot onoise_spectrum
+*#print all
+
+.noise	 V(Vout,0)	Vs 	dec  	100 	1 	1k 
+Gs	 Vs	Vout	Vs 	Vout	100u
+Rin	 Vout	0	1k
+Vs	 Vs 	0	dc 	0 	ac 	1
+.print noise all
+.end

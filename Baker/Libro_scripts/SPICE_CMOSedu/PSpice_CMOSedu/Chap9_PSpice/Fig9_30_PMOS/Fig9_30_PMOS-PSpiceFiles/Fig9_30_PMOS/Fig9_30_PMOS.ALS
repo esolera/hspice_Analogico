@@ -1,0 +1,6 @@
+.ALIASES
+V_VBS           VBS(+=N04208 -=0 ) CN @FIG9_30_PMOS.Fig9_30_PMOS(sch_1):INS4186@SOURCE.VSRC.Normal(chips)
+V_VSG           VSG(+=0 -=N04112 ) CN @FIG9_30_PMOS.Fig9_30_PMOS(sch_1):INS4056@SOURCE.VSRC.Normal(chips)
+M_M1            M1(d=N04168 g=N04112 s=0 b=N04208 ) CN @FIG9_30_PMOS.Fig9_30_PMOS(sch_1):INS4114@BREAKOUT.MbreakP4.Normal(chips)
+V_VSD           VSD(+=0 -=N04168 ) CN @FIG9_30_PMOS.Fig9_30_PMOS(sch_1):INS4076@SOURCE.VSRC.Normal(chips)
+.ENDALIASES

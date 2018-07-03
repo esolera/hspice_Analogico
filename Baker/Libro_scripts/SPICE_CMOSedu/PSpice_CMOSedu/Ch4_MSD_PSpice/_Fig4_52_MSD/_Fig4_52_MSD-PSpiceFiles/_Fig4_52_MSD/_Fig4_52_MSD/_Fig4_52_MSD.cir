@@ -1,0 +1,19 @@
+** Profile: "_Fig4_52_MSD-_Fig4_52_MSD"  [ C:\Users\Christian\Desktop\MSD\Ch4_MSD_PSpice\_Fig4_52_MSD\_Fig4_52_MSD-PSpiceFiles\_Fig4_52_MSD\_Fig4_52_MSD.sim ] 
+
+** Creating circuit file "_Fig4_52_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 1k 100MEG
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\_Fig4_52_MSD.net" 
+
+
+.END

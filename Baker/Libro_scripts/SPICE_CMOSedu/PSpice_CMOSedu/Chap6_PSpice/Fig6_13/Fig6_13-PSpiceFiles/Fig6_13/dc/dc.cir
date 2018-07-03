@@ -1,0 +1,21 @@
+** Profile: "Fig6_13-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap6_PSpice\Fig6_13\Fig6_13-pspicefiles\Fig6_13\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig6_13-pspicefiles/Fig6_13.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_VGS 0 2 0.01 
++ LIN V_VSB 0 5 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig6_13.net" 
+
+
+.END

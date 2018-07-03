@@ -1,0 +1,86 @@
+
+**** 05/23/13 01:56:50 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig1_27_AC_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\CMOSEDU_PSPICE\MSD\Ch1_MSD_Pspice\_Fig1_27_AC_MSD-
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig1_27_AC_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 1k 200MEG
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source _FIG1_27_AC_MSD
+R_R1         0 N02801  50 TC=0,0 
+T_T1         N02801 0 VOUT 0 Z0=50 TD=10ns  
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+E_E1         VOUT 0 VIN N02897 1
+E_E2         N02897 0 0 N02801 .95
+
+**** RESUMING _Fig1_27_AC_MSD.cir ****
+.END
+
+**** 05/23/13 01:56:50 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig1_27_AC_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\CMOSEDU_PSPICE\MSD\Ch1_MSD_Pspice\_Fig1_27_AC_MSD-
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( VOUT)    0.0000  (N02801)    0.0000 (N02897)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/23/13 01:56:50 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig1_27_AC_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\CMOSEDU_PSPICE\MSD\Ch1_MSD_Pspice\_Fig1_27_AC_MSD-
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

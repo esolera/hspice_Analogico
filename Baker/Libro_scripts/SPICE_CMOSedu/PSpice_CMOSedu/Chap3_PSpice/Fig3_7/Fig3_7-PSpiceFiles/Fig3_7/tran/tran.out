@@ -1,0 +1,43 @@
+
+**** 06/29/13 10:51:44 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig3_7-tran"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap3_PSpice\Fig3_7\Fig3_7-pspicefiles\Fig3_7\tran.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 250p 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig3_7.net" 
+
+
+
+**** INCLUDING Fig3_7.net ****
+* source FIG3_7
+V_Vin         VIN 0  
++PULSE 0 1 50p 
+R_Rload         0 VOUT  1G TC=0,0 
+X_TRC         VIN VOUT 0 TLUMP128 PARAMS: LEN=5000 R=0.1 L=0 G=0 C=32e-18
+
+**** RESUMING tran.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit TLUMP128 used by X_TRC is undefined
+

@@ -1,0 +1,9 @@
+* source _FIG4_13_K_IS_2_AC_MSD
+T_T1         N24625 0 N24637 0 Z0=50 TD=20n  
+T_T2         N24648 0 VOUT 0 Z0=50 TD=10n  
+E_E1         N24664 0 N24625 N24637 1
+E_E2         VOUT 0 N24664 N24644 1
+E_E3         N24644 0 0 N24648 1
+V_V1         N24625 0 DC 0Vdc AC 1Vac 
+R_R1         0 N24637  50 TC=0,0 
+R_R2         0 N24648  50 TC=0,0 

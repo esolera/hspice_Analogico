@@ -1,0 +1,87 @@
+(ExpressProject "_Fig5_8_MSD"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\_library_cmosedu_msd\cmosedu_msd.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\_Fig5_8_MSD.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\_Fig5_8_MSD-pspicefiles\_Fig5_8_MSD\_Fig5_8_MSD.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\_Fig5_8_MSD-pspicefiles\_Fig5_8_MSD\_Fig5_8_MSD.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\_Fig5_8_MSD-pspicefiles\_Fig5_8_MSD\_Fig5_8_MSD.sim"
+        (DisplayName "_Fig5_8_MSD-_Fig5_8_MSD")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSRC
+      (FullPartName "VSRC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (E
+      (FullPartName "E.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (S/H
+      (FullPartName "S/H.Normal")
+      (LibraryName
+         "C:\USERS\CHRISTIAN\DESKTOP\MSD\CH5_MSD_PSPICE\_Fig5_8_MSD\_LIBRARY_CMOSEDU_MSD\CMOSEDU_MSD.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\Christian\Desktop\MSD\Ch5_MSD_PSpice\_Fig5_8_MSD\_Fig5_8_MSD.dsn")
+      (Path "Design Resources"
+         "C:\Users\Christian\Desktop\MSD\Ch5_MSD_PSpice\_Fig5_8_MSD\_Fig5_8_MSD.dsn"
+         "_Fig5_8_MSD")
+      (Path "Design Resources" "Library")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 482"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 200 1218 200 720")
+        (Scroll "0 0")
+        (Zoom "101")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\CHRISTIAN\DESKTOP\MSD\CH5_MSD_PSPICE\_FIG5_8_MSD\_FIG5_8_MSD.DSN")
+      (Schematic "_Fig5_8_MSD")
+      (Page "_Fig5_8_MSD")))
+  (MPSSessionName "Christian"))

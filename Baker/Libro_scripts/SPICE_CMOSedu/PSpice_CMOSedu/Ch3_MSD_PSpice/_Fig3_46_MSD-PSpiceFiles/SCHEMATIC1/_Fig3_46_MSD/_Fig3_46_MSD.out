@@ -1,0 +1,132 @@
+
+**** 06/13/13 10:22:18 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_46_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_46_MSD\_fig3_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig3_46_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1k 100meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source _FIG3_46_MSD
+V_Vinp         VINP 0 DC .5Vdc AC .5Vac 
+R_RIT1         VINP N06247  100G TC=0,0 
+R_RIB2         VOUTP1 N06491  20k TC=0,0 
+C_CIT2         VOUTM1 N06495  1e-18  TC=0,0 
+R_RIB1         VINM N06233  100G TC=0,0 
+V_Vinm         VINM 0 DC .5Vdc AC -.5Vac 
+V_VCM         VCM 0 DC .5  
+C_CIB2         VOUTP1 N06491  1e-18  TC=0,0 
+C_CIT1         VINP N06247  4p  TC=0,0 
+R_RFB1         VOUTP1 N06233  5k TC=0,0 
+C_CFT1         N06247 VOUTM1  20p  TC=0,0 
+R_RFB2         N06233 VOUTP  1.25k TC=0,0 
+R_RF1         N06247 VOUTP1  5.25k  
+C_CIB1         VINM N06233  4p  TC=0,0 
+C_CFT2         N06495 VOUTP  20p  TC=0,0 
+C_CFB1         N06233 VOUTP1  20p  TC=0,0 
+R_RF2         N06233 VOUTM1  5.25k  
+C_CFB2         N06491 VOUTM  20p  TC=0,0 
+R_RFT2         N06247 VOUTM  1.25k TC=0,0 
+R_RFT1         VOUTM1 N06247  5k TC=0,0 
+R_RIT2         VOUTM1 N06495  20k TC=0,0 
+R_U1_R3         U1_N00417 U1_N00447  .0001 TC=0,0 
+R_U1_RT         U1_N00417 VOUTM1  1 TC=0,0 
+R_U1_RB         VOUTP1 U1_N00417  1 TC=0,0 
+R_U1_R4         U1_N00417 U1_N01744  .0001 TC=0,0 
+G_U1_G1         VOUTM1 U1_N00405 N06233 N06247 100Meg
+G_U1_G2         U1_N00405 VOUTP1 N06233 N06247 100Meg
+R_U1_R5         U1_N00405 U1_N00417  .0001 TC=0,0 
+G_U1_G3         U1_N00447 0 VCM U1_N01744 100Meg
+R_U2_R3         U2_N00417 U2_N00447  .0001 TC=0,0 
+R_U2_RT         U2_N00417 VOUTP  1 TC=0,0 
+R_U2_RB         VOUTM U2_N00417  1 TC=0,0 
+R_U2_R4         U2_N00417 U2_N01744  .0001 TC=0,0 
+G_U2_G1         VOUTP U2_N00405 N06491 N06495 100Meg
+G_U2_G2         U2_N00405 VOUTM N06491 N06495 100Meg
+R_U2_R5         U2_N00405 U2_N00417  .0001 TC=0,0 
+G_U2_G3         U2_N00447 0 VCM U2_N01744 100Meg
+
+**** RESUMING _Fig3_46_MSD.cir ****
+.END
+
+**** 06/13/13 10:22:18 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_46_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_46_MSD\_fig3_
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCM)     .5000  ( VINM)     .5000  ( VINP)     .5000  (VOUTM)     .5000      
+
+(VOUTP)     .5000  (N06233)     .5000 (N06247)     .5000 (N06491)     .5000     
+
+(N06495)     .5000 (VOUTM1)     .5000 (VOUTP1)     .5000 (U1_N00405)     .5000  
+
+(U1_N00417)     .5000                 (U1_N00447)     .5000                     
+
+(U1_N01744)     .5000                 (U2_N00405)     .5000                     
+
+(U2_N00417)     .5000                 (U2_N00447)     .5000                     
+
+(U2_N01744)     .5000                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vinp      -1.256E-20
+    V_Vinm      -1.256E-20
+    V_VCM        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-20  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/13/13 10:22:18 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_46_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_46_MSD\_fig3_
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

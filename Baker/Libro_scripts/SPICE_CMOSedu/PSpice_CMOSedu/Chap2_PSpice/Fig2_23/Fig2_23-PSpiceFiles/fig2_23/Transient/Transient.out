@@ -1,0 +1,44 @@
+
+**** 06/29/13 10:54:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig2_23-Transient"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap2_PSpice\Fig2_23\fig2_23-pspicefiles\fig2_23\transient
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig2_23-pspicefiles/Fig2_23.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig2_23.net" 
+
+
+
+**** INCLUDING Fig2_23.net ****
+* source FIG2_23
+V_Vin         VIN 0  
++PULSE 0 1 5n 10p 
+R_Rload         0 VOUT  1G TC=0,0 
+X_TRC         VIN VOUT 0 TLUMP128 PARAMS: LEN=50 R=5k L=0 G=0 C=5f
+
+**** RESUMING Transient.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit TLUMP128 used by X_TRC is undefined
+

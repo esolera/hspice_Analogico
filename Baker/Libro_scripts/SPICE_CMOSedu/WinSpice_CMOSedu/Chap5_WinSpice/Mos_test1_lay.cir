@@ -1,0 +1,23 @@
+*** SPICE Circuit File of MOS_TEST1_LAY  02/27/04 15:59:22
+
+* Start of C:\Lasi7\Mosis\Mos_test1.txt
+
+*#destroy all
+*#run
+*#let id=-i(vds)
+*#plot id
+
+vds d s DC 0
+vgs g s DC 0
+
+.dc vds 0 1 1m vgs 0 1 0.25
+
+.options scale=50nm
+
+*ground the source
+Vs  s 0 DC 0
+
+M1 d g s 0 N_50n L=1 W=10
+
+.include cmosedu_models.txt
+.END

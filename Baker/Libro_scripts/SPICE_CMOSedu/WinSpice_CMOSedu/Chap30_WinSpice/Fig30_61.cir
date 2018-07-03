@@ -1,0 +1,84 @@
+*** Figure 30.61 CMOS: Circuit Design, Layout, and Simulation ***
+
+.tran .2n 200n 50n .2n UIC
+
+*#destroy all
+*#run
+*#let error=1-voutp
+*#plot error 
+
+*Input power and references
+VDD VDD 0 DC 1
+Vtrip Vtrip 0 DC 0.5
+VCM VCM 0 DC 0.5
+Vcip Vcip 0 DC 0.5 
+Vcim Vcim 0 DC 0.5 
+
+*Input Signal
+Vinsp    Vinsp   0 DC 0.75
+Vinsm    Vinsm   0 DC 0.25
+
+*Clock Signals
+Vphis  phis  0 DC 0  Pulse 0 1   0      0  0  4n 15n
+Vphia  phia  0 DC 0  Pulse 0 1   5n     0  0  4n 15n
+Vphih  phih  0 DC 0  Pulse 0 1   10n    0  0  4n 15n
+R1 phis 0 1MEG
+R2 phia 0 1MEG
+R3 phih 0 1MEG
+
+*Use a VCVS for the op-amp
+E1 Vopp VCM Vinp Vinm 1k
+E2 VCM Vopm Vinp Vinm 1k
+
+*Setup switched capacitors 
+Cip Vinm Vbotip 1.00p 
+Cfp Vinm Vbotfp 1.02p
+Cim Vinp Vbotim 1.04p 
+Cfm Vinp Vbotfm 1.06p
+
+*Setup switches 
+S1 Vbotfp Vinsp  phis VTRIP  switmod
+S2 Vbotip Vinsp  phis VTRIP  switmod
+S3 Vbotip Vcip   phia VTRIP  switmod
+S4 Vbotim Vcim   phia VTRIP  switmod
+S5 Vbotim Vinsm  phis VTRIP  switmod
+S6 Vbotfm Vinsm  phis VTRIP  switmod
+S7 Vopp Vbotfp   phia VTRIP  switmod
+S8 Vopp Vinm     phis VTRIP  switmod
+S9 Vopm Vinp     phis Vtrip  switmod
+S10 Vopm Vbotfm  phia Vtrip  switmod
+S11 Vopp Vbotip  phih Vtrip  switmod
+S12 Vopm Vbotim  phih Vtrip  switmod
+S13 Vbotfp Vcip  phih Vtrip  switmod
+S14 Vbotfm Vcim  phih Vtrip  switmod
+
+*Use a VCVS for the second A (averaging) op-amp
+E1A VoppA VCM VinpA VinmA 1k
+E2A VCM VopmA VinpA VinmA 1k
+
+*Setup switched capacitors 
+CipA VinmA VbotipA 0.91p 
+CfpA VinmA VbotfpA 2.05p
+CimA VinpA VbotimA 1.1p 
+CfmA VinpA VbotfmA 1.94p
+
+*Setup switches for averaging AMP
+S1A VbotfpA Vopp    phia VTRIP  switmod
+S2A VbotipA Vopm    phia VTRIP  switmod
+S3A VbotimA Vopp    phih VTRIP  switmod
+S4A VbotipA Vopm    phih VTRIP  switmod
+S5A VbotimA Vopp    phia VTRIP  switmod
+S6A VbotfmA Vopm    phia VTRIP  switmod
+S7A VoppA VbotfpA   phih VTRIP  switmod
+S8A VoppA VinmA     phia VTRIP  switmod
+S9A VopmA VinpA     phia Vtrip  switmod
+S10A VopmA VbotfmA  phih Vtrip  switmod
+S11A VoppA Voutp    phih Vtrip  switmod
+S12A VopmA Voutm    phih Vtrip  switmod
+
+Clp Voutp 0 10p
+Clm Voutm 0 10p
+
+.model switmod SW RON=1
+
+.end

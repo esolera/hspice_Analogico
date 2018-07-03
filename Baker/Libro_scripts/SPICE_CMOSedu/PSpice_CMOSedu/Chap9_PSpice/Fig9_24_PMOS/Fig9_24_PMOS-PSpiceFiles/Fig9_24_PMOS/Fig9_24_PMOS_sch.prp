@@ -1,0 +1,97 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VSRC")
+        ("MbreakP4")
+    )
+    ("instances"
+        ("VSG"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_VSG")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"1.15")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"1m")
+                    ("pspice_param"	"AC")
+                )
+                ("TRAN"
+                    ("value"	"")
+                    ("pspice_param"	"TRAN")
+                )
+            )
+        )
+        ("VSD"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_VSD")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5")
+                    ("pspice_param"	"DC")
+                )
+                ("TRAN"
+                    ("value"	"")
+                    ("pspice_param"	"TRAN")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+            )
+        )
+        ("M1"
+            ("device_name"	"MbreakP4")
+            ("pspice_path"	"M_M1")
+            ("level"	"0")
+            ("model_params"
+                ("W"
+                    ("value"	"30u")
+                    ("pspice_param"	"W")
+                )
+                ("L"
+                    ("value"	"2u")
+                    ("pspice_param"	"L")
+                )
+                ("AD"
+                    ("value"	"")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+            )
+        )
+    )
+)

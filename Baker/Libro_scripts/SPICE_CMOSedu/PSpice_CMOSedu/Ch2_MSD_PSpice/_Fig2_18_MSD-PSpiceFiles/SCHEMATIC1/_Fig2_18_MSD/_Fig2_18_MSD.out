@@ -1,0 +1,96 @@
+
+**** 06/11/13 13:08:05 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig2_18_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch2_MSD_Pspice\_Fig2_18_MSD\_fig2_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig2_18_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2us 0 .001us SKIPBP 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source _FIG2_18_MSD
+E_E2         0 VOUT N00534 VOUT 100Meg
+X_S1    VTRIP CLOCK VINB VINS SCHEMATIC1_S1 
+X_S2    CLOCK VTRIP VINS N00534 SCHEMATIC1_S2 
+E_E1         0 VINB VIN VINB 100Meg
+C_C1         0 VINS  1e-10  TC=0,0 
+C_C2         0 N00534  1e-16  TC=0,0 
+V_Vtrip         VTRIP 0 DC .5  
+V_Vin         VIN 0  
++SIN .5 .5 3Meg 0 0 0
+V_Vclock         CLOCK 0  
++PULSE 0 1 0 0 0 4.9n 10n
+
+.subckt SCHEMATIC1_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends SCHEMATIC1_S1
+
+.subckt SCHEMATIC1_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends SCHEMATIC1_S2
+
+**** RESUMING _Fig2_18_MSD.cir ****
+.END
+
+**** 06/11/13 13:08:05 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig2_18_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch2_MSD_Pspice\_Fig2_18_MSD\_fig2_
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_S1._S1        X_S2._S2        
+         RON    1               1            
+        ROFF    1.000000E+09    1.000000E+09 
+         VON    1.000000E-03    1.000000E-03 
+        VOFF   -1.000000E-03   -1.000000E-03 
+
+
+
+          JOB CONCLUDED
+
+**** 06/11/13 13:08:05 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig2_18_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch2_MSD_Pspice\_Fig2_18_MSD\_fig2_
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .59
+

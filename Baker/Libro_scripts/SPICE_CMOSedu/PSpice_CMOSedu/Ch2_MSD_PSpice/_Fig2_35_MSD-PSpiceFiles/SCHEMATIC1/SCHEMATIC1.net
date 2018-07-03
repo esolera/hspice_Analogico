@@ -1,0 +1,27 @@
+* source _FIG2_35_MSD
+R_U1_R1         0 U1_VTRIP  100Meg TC=0,0 
+R_U1_R2         U1_VTRIP VDD  100Meg TC=0,0 
+X_U1_S1    PHI1 U1_VTRIP VIN N00460 SCHEMATIC1_U1_S1 
+X_U1_S2    PHI2 U1_VTRIP N00460 VOUT SCHEMATIC1_U1_S2 
+V_VDD         VDD 0 DC 1  
+V_VCM         VCM 0 DC .5  
+V_Vin         VIN 0  
++SIN .5 .5 1.59Meg 0 0 0
+V_Vphi1         PHI1 0  
++PULSE 0 1 0 200p 200p 4n 10n
+V_Vphi2         PHI2 0  
++PULSE 0 1 5n 200p 200p 4n 10n
+C_CI         0 N00460  1p  TC=0,0 
+C_CF         0 VOUT  10p  TC=0,0 
+
+.subckt SCHEMATIC1_U1_S1 1 2 3 4  
+S_U1_S1         3 4 1 2 _U1_S1
+RS_U1_S1         1 2 1G
+.MODEL         _U1_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e.3 Von=1e-3
+.ends SCHEMATIC1_U1_S1
+
+.subckt SCHEMATIC1_U1_S2 1 2 3 4  
+S_U1_S2         3 4 1 2 _U1_S2
+RS_U1_S2         1 2 1G
+.MODEL         _U1_S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends SCHEMATIC1_U1_S2

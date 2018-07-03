@@ -1,0 +1,11 @@
+* source FIG10_20_SYMBOL
+M_U1_M4         VOUT 0 VIN VDD P_50n  
++ L=50n  
++ W=1u         
+M_U1_M3         VIN VDD VOUT 0 N_50n  
++ L=50n  
++ W=500n         
+C_C1         VOUT 0  50f  TC=0,0 
+V_Vin         VIN 0  
++PULSE 0 1 500p 0 0 1n 3n
+V_VDD         VDD 0 DC 1  

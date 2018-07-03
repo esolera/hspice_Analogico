@@ -1,0 +1,34 @@
+*** Figure 20.25 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#set temp=0
+*#run
+*#set temp=20
+*#run
+*#set temp=40
+*#run
+*#set temp=60
+*#run
+*#set temp=80
+*#run
+*#set temp=100
+*#run
+*#plot tran1.VD1 tran2.VD1 tran3.VD1 tran4.VD1 tran5.VD1 tran6.VD1
+
+.option scale=50n
+.tran 1m 1
+
+VDD 	VDD	0	DC	1
+Vo	Vo	0	DC	0
+Vmeas	Vmeas	0	DC	0
+
+Iref	VD1	Vmeas	DC	10u
+M1	VD1	VD1	VDD	VDD	P_50n L=2 W=100
+M2	Vo	VD1	VDD	VDD	P_50n L=2 W=100
+
+
+.include cmosedu_models.txt
+
+.end
+   
+

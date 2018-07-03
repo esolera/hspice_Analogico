@@ -1,0 +1,19 @@
+** Profile: "Fig1-12-tf"  [ D:\ORCAD\TOOLS\CAPTURE\CMOS BOOK\Ch1_Fig1-12\Fig1-12-PSpiceFiles\Fig1-12\tf.sim ] 
+
+** Creating circuit file "tf.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TF I(V_Vmeas) V_Vin
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig1-12.net" 
+
+
+.END

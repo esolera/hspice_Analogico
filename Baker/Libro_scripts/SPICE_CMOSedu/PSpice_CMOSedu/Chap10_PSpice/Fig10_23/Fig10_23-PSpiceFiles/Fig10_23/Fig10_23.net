@@ -1,0 +1,35 @@
+* source FIG10_23
+V_Vin         VIN GND  
++PULSE 0 1 5n 100p 100p 5n 30n
+V_VDD         VDD 0 DC 1  
+C_C1         VOUT 0  50f IC=0 TC=0,0 
+M_M1         VOUT VDD N05633 0 N_50n  
++ L=50n  
++ W=500n         
+M_M2         N05633 VDD N05629 0 N_50n  
++ L=50n  
++ W=500n         
+M_M3         N05629 VDD N05625 0 N_50n  
++ L=50n  
++ W=500n         
+M_M4         N05625 VDD N05621 0 N_50n  
++ L=50n  
++ W=500n         
+M_M5         N05621 VDD N05617 0 N_50n  
++ L=50n  
++ W=500n         
+M_M6         N05617 VDD N05613 0 N_50n  
++ L=50n  
++ W=500n         
+M_M7         N05613 VDD N05596 0 N_50n  
++ L=50n  
++ W=500n         
+M_M8         N05596 VDD N05592 0 N_50n  
++ L=50n  
++ W=500n         
+M_M9         N05592 VDD N05588 0 N_50n  
++ L=50n  
++ W=500n         
+M_M10         N05588 VDD VIN 0 N_50n  
++ L=50n  
++ W=500n         

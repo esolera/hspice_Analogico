@@ -1,0 +1,17 @@
+.ALIASES
+E_E2            E2(3=0 4=VOUT 1=N00534 2=VOUT ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS234@_FIG2_18_MSD.E_2.Normal(chips)
+X_S1    S1(1=VTRIP 2=CLOCK 3=VINB 4=VINS ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS275@ANALOG.S.Normal(chips)
+X_S2    S2(1=CLOCK 2=VTRIP 3=VINS 4=N00534 ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS303@ANALOG.S.Normal(chips)
+E_E1            E1(3=0 4=VINB 1=VIN 2=VINB ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS368@_FIG2_18_MSD.E_1.Normal(chips)
+C_C1            C1(1=0 2=VINS ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS445@ANALOG.C.Normal(chips)
+C_C2            C2(1=0 2=N00534 ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS461@ANALOG.C.Normal(chips)
+V_Vtrip          Vtrip(+=VTRIP -=0 ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS704@SOURCE.VSRC.Normal(chips)
+V_Vin           Vin(+=VIN -=0 ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS741@SOURCE.VSIN.Normal(chips)
+V_Vclock          Vclock(+=CLOCK -=0 ) CN @_FIG2_18_MSD._Fig2_18_MSD(sch_1):INS786@SOURCE.VPULSE.Normal(chips)
+_    _(clock=CLOCK)
+_    _(Vin=VIN)
+_    _(Vinb=VINB)
+_    _(Vins=VINS)
+_    _(Vout=VOUT)
+_    _(Vtrip=VTRIP)
+.ENDALIASES

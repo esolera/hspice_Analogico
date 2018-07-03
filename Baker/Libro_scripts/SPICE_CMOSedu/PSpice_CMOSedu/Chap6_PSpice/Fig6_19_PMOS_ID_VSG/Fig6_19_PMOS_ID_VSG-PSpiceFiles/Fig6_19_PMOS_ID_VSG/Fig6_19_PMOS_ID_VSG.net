@@ -1,0 +1,7 @@
+* source FIG6_19_PMOS_ID_VSG
+V_VSG         0 N02831 DC 0  
+V_VSD         0 N02927 DC 1  
+M_M1         N02927 N02831 0 N03658 P_50n  
++ L=50n  
++ W=500n         
+V_VBS         N03658 0 DC 0  

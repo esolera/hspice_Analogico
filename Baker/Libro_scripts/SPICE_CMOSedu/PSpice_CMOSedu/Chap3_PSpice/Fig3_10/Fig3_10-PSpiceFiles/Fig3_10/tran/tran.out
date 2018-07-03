@@ -1,0 +1,114 @@
+
+**** 06/29/13 10:54:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig3_10-tran"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap3_PSpice\Fig3_10\Fig3_10-pspicefiles\Fig3_10\tran.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig3_10-pspicefiles/Fig3_10.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5n 0 
+.OPTIONS ADVCONV
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig3_10.net" 
+
+
+
+**** INCLUDING Fig3_10.net ****
+* source FIG3_10
+V_Vin         VMETAL2 0  
++PULSE 0 1 2n 1n 
+C_C12         VMETAL2 VMETAL1 Cbreak 209e-18 IC=0
+C_C1sub         VMETAL1 0 Cbreak 164e-18 IC=0
+R_R1         VMETAL1 0  100T TC=0,0 
+
+**** RESUMING tran.cir ****
+.END
+
+**** 06/29/13 10:54:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig3_10-tran"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap3_PSpice\Fig3_10\Fig3_10-pspicefiles\Fig3_10\tran.sim ] 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Cbreak          
+           C    1            
+
+
+**** 06/29/13 10:54:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig3_10-tran"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap3_PSpice\Fig3_10\Fig3_10-pspicefiles\Fig3_10\tran.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VMETAL1)    0.0000                   (VMETAL2)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+ AutoConverge Simulator Options
+ ITL1 = 150
+ ITL2 = 20
+ ITL4 = 10
+ RELTOL = 0.001
+ ABSTOL = 1e-012
+ VNTOL = 1e-006
+ PIVTOL = 1e-013
+
+**** 06/29/13 10:54:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig3_10-tran"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap3_PSpice\Fig3_10\Fig3_10-pspicefiles\Fig3_10\tran.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

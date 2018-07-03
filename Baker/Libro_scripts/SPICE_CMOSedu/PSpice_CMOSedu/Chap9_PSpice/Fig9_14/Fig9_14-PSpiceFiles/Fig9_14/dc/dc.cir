@@ -1,0 +1,20 @@
+** Profile: "Fig9_14-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_14\Fig9_14-pspicefiles\Fig9_14\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig9_14-pspicefiles/Fig9_14.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_Vin 1 5 0.07 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig9_14.net" 
+
+
+.END

@@ -1,0 +1,89 @@
+* source _FIG2_53_MSD
+C_CLT         VOUTP 0  10p  TC=0,0 
+C_CFB         VOPM VINP  1p  TC=0,0 
+C_CIT         N20975 VINM  1p  TC=0,0 
+R_U2_R1         0 U2_VTRIP  100Meg TC=0,0 
+R_U2_R2         U2_VTRIP VDD  100Meg TC=0,0 
+X_U2_S1    PHI2 U2_VTRIP VINSP N20975 switch_1_U2_S1 
+C_CFT         VOPP VINM  1p  TC=0,0 
+C_CIB         N20641 VINP  1p  TC=0,0 
+V_Vphi2         PHI2 0  
++PULSE 0 1 0 200p 200p 4n 10n
+V_VDD         VDD 0 DC 1  
+V_VCM         VCM 0 DC .5  
+V_Vphi3         PHI3 0  
++PULSE 0 1 5n 200p 200p 4n 10n
+R_R1         0 VOPP  10G TC=0,0 
+R_U1_RT         U1_N02287 VOPP  1 TC=0,0 
+G_U1_G1         VOPP U1_N02275 VINP VINM 100Meg
+R_U1_RB         VOPM U1_N02287  1 TC=0,0 
+G_U1_G2         U1_N02275 VOPM VINP VINM 100Meg
+R_U1_R3         U1_N02287 U1_N02291  .0001 TC=0,0 
+G_U1_G3         U1_N02291 0 VCM U1_N02461 100Meg
+R_U1_R4         U1_N02287 U1_N02461  .0001 TC=0,0 
+R_U1_R5         U1_N02275 U1_N02287  .0001 TC=0,0 
+V_Vinp         VINSP 0  
++SIN .5 .5 2.5Meg 0 0 0
+C_CLB         0 VOUTM  10p  TC=0,0 
+V_Vphi1         PHI1 0  
++PULSE 0 1 0 200p 200p 4n 10n
+R_U3_R1         0 U3_VTRIP  100Meg TC=0,0 
+R_U3_R2         U3_VTRIP VDD  100Meg TC=0,0 
+X_U3_S1    PHI3 U3_VTRIP N20975 N20641 switch_1_U3_S1 
+R_U4_R1         0 U4_VTRIP  100Meg TC=0,0 
+R_U4_R2         U4_VTRIP VDD  100Meg TC=0,0 
+X_U4_S1    PHI2 U4_VTRIP VCM N20641 switch_1_U4_S1 
+R_U5_R1         0 U5_VTRIP  100Meg TC=0,0 
+R_U5_R2         U5_VTRIP VDD  100Meg TC=0,0 
+X_U5_S1    PHI1 U5_VTRIP VINM VOPP switch_1_U5_S1 
+R_U6_R1         0 U6_VTRIP  100Meg TC=0,0 
+R_U6_R2         U6_VTRIP VDD  100Meg TC=0,0 
+X_U6_S1    PHI1 U6_VTRIP VINP VOPM switch_1_U6_S1 
+R_U7_R1         0 U7_VTRIP  100Meg TC=0,0 
+R_U7_R2         U7_VTRIP VDD  100Meg TC=0,0 
+X_U7_S1    PHI3 U7_VTRIP VOPP VOUTP switch_1_U7_S1 
+R_U8_R1         0 U8_VTRIP  100Meg TC=0,0 
+R_U8_R2         U8_VTRIP VDD  100Meg TC=0,0 
+X_U8_S1    PHI3 U8_VTRIP VOPM VOUTM switch_1_U8_S1 
+
+.subckt switch_1_U2_S1 1 2 3 4  
+S_U2_S1         3 4 1 2 _U2_S1
+RS_U2_S1         1 2 1G
+.MODEL         _U2_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U2_S1
+
+.subckt switch_1_U3_S1 1 2 3 4  
+S_U3_S1         3 4 1 2 _U3_S1
+RS_U3_S1         1 2 1G
+.MODEL         _U3_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U3_S1
+
+.subckt switch_1_U4_S1 1 2 3 4  
+S_U4_S1         3 4 1 2 _U4_S1
+RS_U4_S1         1 2 1G
+.MODEL         _U4_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U4_S1
+
+.subckt switch_1_U5_S1 1 2 3 4  
+S_U5_S1         3 4 1 2 _U5_S1
+RS_U5_S1         1 2 1G
+.MODEL         _U5_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U5_S1
+
+.subckt switch_1_U6_S1 1 2 3 4  
+S_U6_S1         3 4 1 2 _U6_S1
+RS_U6_S1         1 2 1G
+.MODEL         _U6_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U6_S1
+
+.subckt switch_1_U7_S1 1 2 3 4  
+S_U7_S1         3 4 1 2 _U7_S1
+RS_U7_S1         1 2 1G
+.MODEL         _U7_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U7_S1
+
+.subckt switch_1_U8_S1 1 2 3 4  
+S_U8_S1         3 4 1 2 _U8_S1
+RS_U8_S1         1 2 1G
+.MODEL         _U8_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U8_S1

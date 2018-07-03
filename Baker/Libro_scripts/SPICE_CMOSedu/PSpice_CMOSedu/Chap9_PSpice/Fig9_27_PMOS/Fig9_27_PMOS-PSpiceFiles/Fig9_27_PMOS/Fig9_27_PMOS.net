@@ -1,0 +1,6 @@
+* source FIG9_27_PMOS
+M_M1         N03731 N03675 0 0 P_50n  
++ L=100n  
++ W=1u         
+V_VSD         0 N03731 DC 100m  
+V_VSG         0 N03675 DC 0  

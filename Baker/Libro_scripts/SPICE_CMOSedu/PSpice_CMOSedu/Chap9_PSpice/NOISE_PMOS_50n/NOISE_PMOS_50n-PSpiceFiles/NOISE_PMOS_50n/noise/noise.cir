@@ -1,0 +1,21 @@
+** Profile: "NOISE_PMOS_50n-noise"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\NOISE_PMOS_50n\Noise_pmos_50n-pspicefiles\Noise_pmos_50n\Noise.sim ] 
+
+** Creating circuit file "noise.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../noise_pmos_50n-pspicefiles/noise_pmos_50n.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 1000MEG
+.NOISE V([VD],[0]) V_VSG 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NOISE_PMOS_50n.net" 
+
+
+.END

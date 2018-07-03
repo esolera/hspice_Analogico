@@ -1,0 +1,243 @@
+
+**** 07/02/13 17:44:53 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig2_48_MSD-_Fig2_48_MSD"  [ C:\Users\jbaker\Desktop\Ch2_MSD_Pspice\_Fig2_48_MSD\_Fig2_48_MSD-pspicefiles\_Fig2_48_MSD
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig2_48_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500ns 0 .01n SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\_Fig2_48_MSD.net" 
+
+
+
+**** INCLUDING _Fig2_48_MSD.net ****
+* source _FIG2_48_MSD
+C_CIT         N10128 VINM  1p  TC=0,0 
+V_Vphi1         PHI1 0  
++PULSE 0 1 0 200p 200p 4n 10n
+C_CFT         N06992 VINM  1p  TC=0,0 
+V_Vinm         VINSM 0  
++SIN .5 -.15 2.5Meg 0 0 0
+C_CFB         N06988 VINP  1p  TC=0,0 
+C_CIB         N10141 VINP  1p  TC=0,0 
+V_Vphi2         PHI2 0  
++PULSE 0 1 0 200p 200p 4n 10n
+V_VDD         VDD 0 DC 1  
+R_U2_R1         0 U2_VTRIP  100Meg TC=0,0 
+R_U2_R2         U2_VTRIP VDD  100Meg TC=0,0 
+X_U2_S1    PHI2 U2_VTRIP VINSP N06992 switch_1_U2_S1 
+C_CLT         VOUTP 0  10p  TC=0,0 
+C_CLB         0 VOUTM  10p  TC=0,0 
+V_Vinp         VINSP 0  
++SIN .5 .15 2.5Meg 0 0 0
+V_VCM         VCM 0 DC .5  
+V_Vphi3         PHI3 0  
++PULSE 0 1 5n 200p 200p 4n 10n
+R_U1_RT         U1_N02287 VOPP  1 TC=0,0 
+G_U1_G1         VOPP U1_N02275 VINP VINM 100Meg
+R_U1_RB         VOPM U1_N02287  1 TC=0,0 
+G_U1_G2         U1_N02275 VOPM VINP VINM 100Meg
+R_U1_R3         U1_N02287 U1_N02291  .0001 TC=0,0 
+G_U1_G3         U1_N02291 0 VCM U1_N02461 100Meg
+R_U1_R4         U1_N02287 U1_N02461  .0001 TC=0,0 
+R_U1_R5         U1_N02275 U1_N02287  .0001 TC=0,0 
+R_U3_R1         0 U3_VTRIP  100Meg TC=0,0 
+R_U3_R2         U3_VTRIP VDD  100Meg TC=0,0 
+X_U3_S1    PHI2 U3_VTRIP VINSP N10128 switch_1_U3_S1 
+R_U4_R1         0 U4_VTRIP  100Meg TC=0,0 
+R_U4_R2         U4_VTRIP VDD  100Meg TC=0,0 
+X_U4_S1    PHI3 U4_VTRIP VCM N10128 switch_1_U4_S1 
+R_U5_R1         0 U5_VTRIP  100Meg TC=0,0 
+R_U5_R2         U5_VTRIP VDD  100Meg TC=0,0 
+X_U5_S1    PHI3 U5_VTRIP VCM N10141 switch_1_U5_S1 
+R_U6_R1         0 U6_VTRIP  100Meg TC=0,0 
+R_U6_R2         U6_VTRIP VDD  100Meg TC=0,0 
+X_U6_S1    PHI2 U6_VTRIP VINSM N10141 switch_1_U6_S1 
+R_U7_R1         0 U7_VTRIP  100Meg TC=0,0 
+R_U7_R2         U7_VTRIP VDD  100Meg TC=0,0 
+X_U7_S1    PHI2 U7_VTRIP VINSM N06988 switch_1_U7_S1 
+R_U8_R1         0 U8_VTRIP  100Meg TC=0,0 
+R_U8_R2         U8_VTRIP VDD  100Meg TC=0,0 
+X_U8_S1    PHI3 U8_VTRIP N06992 VOPP switch_1_U8_S1 
+R_U9_R1         0 U9_VTRIP  100Meg TC=0,0 
+R_U9_R2         U9_VTRIP VDD  100Meg TC=0,0 
+X_U9_S1    PHI1 U9_VTRIP VINM VOPP switch_1_U9_S1 
+R_U10_R1         0 U10_VTRIP  100Meg TC=0,0 
+R_U10_R2         U10_VTRIP VDD  100Meg TC=0,0 
+X_U10_S1    PHI1 U10_VTRIP VINP VOPM switch_1_U10_S1 
+R_U11_R1         0 U11_VTRIP  100Meg TC=0,0 
+R_U11_R2         U11_VTRIP VDD  100Meg TC=0,0 
+X_U11_S1    PHI3 U11_VTRIP N06988 VOPM switch_1_U11_S1 
+R_U12_R1         0 U12_VTRIP  100Meg TC=0,0 
+R_U12_R2         U12_VTRIP VDD  100Meg TC=0,0 
+X_U12_S1    PHI3 U12_VTRIP VOPP VOUTP switch_1_U12_S1 
+R_U13_R1         0 U13_VTRIP  100Meg TC=0,0 
+R_U13_R2         U13_VTRIP VDD  100Meg TC=0,0 
+X_U13_S1    PHI3 U13_VTRIP VOPM VOUTM switch_1_U13_S1 
+
+.subckt switch_1_U2_S1 1 2 3 4  
+S_U2_S1         3 4 1 2 _U2_S1
+RS_U2_S1         1 2 1G
+.MODEL         _U2_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U2_S1
+
+.subckt switch_1_U3_S1 1 2 3 4  
+S_U3_S1         3 4 1 2 _U3_S1
+RS_U3_S1         1 2 1G
+.MODEL         _U3_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U3_S1
+
+.subckt switch_1_U4_S1 1 2 3 4  
+S_U4_S1         3 4 1 2 _U4_S1
+RS_U4_S1         1 2 1G
+.MODEL         _U4_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U4_S1
+
+.subckt switch_1_U5_S1 1 2 3 4  
+S_U5_S1         3 4 1 2 _U5_S1
+RS_U5_S1         1 2 1G
+.MODEL         _U5_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U5_S1
+
+.subckt switch_1_U6_S1 1 2 3 4  
+S_U6_S1         3 4 1 2 _U6_S1
+RS_U6_S1         1 2 1G
+.MODEL         _U6_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U6_S1
+
+.subckt switch_1_U7_S1 1 2 3 4  
+S_U7_S1         3 4 1 2 _U7_S1
+RS_U7_S1         1 2 1G
+.MODEL         _U7_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U7_S1
+
+.subckt switch_1_U8_S1 1 2 3 4  
+S_U8_S1         3 4 1 2 _U8_S1
+RS_U8_S1         1 2 1G
+.MODEL         _U8_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U8_S1
+
+.subckt switch_1_U9_S1 1 2 3 4  
+S_U9_S1         3 4 1 2 _U9_S1
+RS_U9_S1         1 2 1G
+.MODEL         _U9_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U9_S1
+
+.subckt switch_1_U10_S1 1 2 3 4  
+S_U10_S1         3 4 1 2 _U10_S1
+RS_U10_S1         1 2 1G
+.MODEL         _U10_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U10_S1
+
+.subckt switch_1_U11_S1 1 2 3 4  
+S_U11_S1         3 4 1 2 _U11_S1
+RS_U11_S1         1 2 1G
+.MODEL         _U11_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U11_S1
+
+.subckt switch_1_U12_S1 1 2 3 4  
+S_U12_S1         3 4 1 2 _U12_S1
+RS_U12_S1         1 2 1G
+.MODEL         _U12_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U12_S1
+
+.subckt switch_1_U13_S1 1 2 3 4  
+S_U13_S1         3 4 1 2 _U13_S1
+RS_U13_S1         1 2 1G
+.MODEL         _U13_S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends switch_1_U13_S1
+
+**** RESUMING _Fig2_48_MSD.cir ****
+.END
+
+**** 07/02/13 17:44:53 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig2_48_MSD-_Fig2_48_MSD"  [ C:\Users\jbaker\Desktop\Ch2_MSD_Pspice\_Fig2_48_MSD\_Fig2_48_MSD-pspicefiles\_Fig2_48_MSD
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2_S1._U2_S1  X_U3_S1._U3_S1  X_U4_S1._U4_S1  X_U5_S1._U5_S1  
+         RON    1               1               1               1            
+        ROFF    1.000000E+09    1.000000E+09    1.000000E+09    1.000000E+09 
+         VON    1.000000E-03    1.000000E-03    1.000000E-03    1.000000E-03 
+        VOFF   -1.000000E-03   -1.000000E-03   -1.000000E-03   -1.000000E-03 
+
+
+               X_U6_S1._U6_S1  X_U7_S1._U7_S1  X_U8_S1._U8_S1  X_U9_S1._U9_S1  
+         RON    1               1               1               1            
+        ROFF    1.000000E+09    1.000000E+09    1.000000E+09    1.000000E+09 
+         VON    1.000000E-03    1.000000E-03    1.000000E-03    1.000000E-03 
+        VOFF   -1.000000E-03   -1.000000E-03   -1.000000E-03   -1.000000E-03 
+
+
+               X_U10_S1._U10_S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON    1.000000E-03 
+        VOFF   -1.000000E-03 
+
+
+               X_U11_S1._U11_S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON    1.000000E-03 
+        VOFF   -1.000000E-03 
+
+
+               X_U12_S1._U12_S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON    1.000000E-03 
+        VOFF   -1.000000E-03 
+
+
+               X_U13_S1._U13_S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON    1.000000E-03 
+        VOFF   -1.000000E-03 
+
+
+
+          JOB CONCLUDED
+
+**** 07/02/13 17:44:53 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig2_48_MSD-_Fig2_48_MSD"  [ C:\Users\jbaker\Desktop\Ch2_MSD_Pspice\_Fig2_48_MSD\_Fig2_48_MSD-pspicefiles\_Fig2_48_MSD
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.62
+

@@ -1,0 +1,60 @@
+
+**** 07/03/13 16:58:01 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig1_13_MSD-_Fig1_13_MSD"  [ C:\Users\jbaker\Desktop\Ch1_MSD_PSpice\_Fig1_13_MSD\_fig1_13_msd-pspicefiles\_fig1_13_msd
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig1_13_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 40ns 0 SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\_Fig1_13_MSD.net" 
+
+
+
+**** INCLUDING _Fig1_13_MSD.net ****
+* source _FIG1_13_MSD
+R_R2         VOUT N00779  5k TC=0,0 
+R_R3         VIN VOUT  5k TC=0,0 
+R_R1         0 N00779  50 TC=0,0 
+T_T1         VIN 0 N00779 0 Z0=50 TD=5ns  
+V_V1         VIN 0  
++SIN 0 1 50Meg 0 0 0
+
+**** RESUMING _Fig1_13_MSD.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+**** 07/03/13 16:58:01 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig1_13_MSD-_Fig1_13_MSD"  [ C:\Users\jbaker\Desktop\Ch1_MSD_PSpice\_Fig1_13_MSD\_fig1_13_msd-pspicefiles\_fig1_13_msd
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

@@ -1,0 +1,18 @@
+*** Figure 1.30 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vout
+
+.tran 100p 8n UIC
+
+Vclk	clk	0	pulse -1 1 2n
+
+Vin	Vin	0	DC	5
+S1	Vin	Vouts	clk	0	switmodel
+R1	Vouts	Vout	1k
+C1	Vout	0	1p	IC=2
+
+.model switmodel sw ron=0.1 
+
+.end

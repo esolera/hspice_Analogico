@@ -1,0 +1,6 @@
+* source FIG3_10
+V_Vin         VMETAL2 0  
++PULSE 0 1 2n 1n 
+C_C12         VMETAL2 VMETAL1 Cbreak 209e-18 IC=0
+C_C1sub         VMETAL1 0 Cbreak 164e-18 IC=0
+R_R1         VMETAL1 0  100T TC=0,0 

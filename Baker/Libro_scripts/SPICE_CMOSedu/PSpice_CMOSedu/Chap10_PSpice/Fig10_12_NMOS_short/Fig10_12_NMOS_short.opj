@@ -1,0 +1,54 @@
+(ExpressProject "Fig10_12_NMOS_short"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\Fig10_12_nmos_short.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File
+       ".\Fig10_12_nmos_short-pspicefiles\Fig10_12_nmos_short\Fig10_12_nmos_short.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile
+         ".\Fig10_12_nmos_short-pspicefiles\Fig10_12_nmos_short\tran.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\Fig10_12_nmos_short-pspicefiles\Fig10_12_nmos_short\tran.sim"
+        (DisplayName "Fig10_12_NMOS_short-tran")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\Fig10_12_nmos_short-pspicefiles\Fig10_12_nmos_short.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           ".\Fig10_12_nmos_short-pspicefiles\Fig10_12_nmos_short.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_12_NMOS_short\Fig10_12_nmos_short.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_12_NMOS_short\Fig10_12_nmos_short.dsn"
+         "Fig10_12_NMOS_short")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_12_NMOS_short\Fig10_12_nmos_short.dsn"
+         "Fig10_12_NMOS_short" "Fig10_12_NMOS_short"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 431"))
+      (Tab 0)))
+  (MPSSessionName "jbaker"))

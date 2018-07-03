@@ -1,0 +1,24 @@
+* source _FIG2_18_MSD
+E_E2         0 VOUT N00534 VOUT 100Meg
+X_S1    VTRIP CLOCK VINB VINS _Fig2_18_MSD_S1 
+X_S2    CLOCK VTRIP VINS N00534 _Fig2_18_MSD_S2 
+E_E1         0 VINB VIN VINB 100Meg
+C_C1         0 VINS  1e-10  TC=0,0 
+C_C2         0 N00534  1e-16  TC=0,0 
+V_Vtrip         VTRIP 0 DC .5  
+V_Vin         VIN 0  
++SIN .5 .5 3Meg 0 0 0
+V_Vclock         CLOCK 0  
++PULSE 0 1 0 0 0 4.9n 10n
+
+.subckt _Fig2_18_MSD_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends _Fig2_18_MSD_S1
+
+.subckt _Fig2_18_MSD_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=1e9 Ron=1.0 Voff=-1e-3 Von=1e-3
+.ends _Fig2_18_MSD_S2

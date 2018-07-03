@@ -1,0 +1,28 @@
+*** Figure 23.20 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#set temp=25
+*#run
+*#set temp=26
+*#run
+*#set temp=27
+*#run
+*#set temp=28
+*#run
+*#set temp=29
+*#run
+*#plot tran1.vd tran2.vd tran3.vd tran4.vd tran5.vd
+
+.tran 1m 1
+
+ID	0	VD	DC	1u
+
+D1	VD	0	PNPDIODE
+
+.MODEL 	PNPDIODE	D	is=1e-18	n=1
+
+.include cmosedu_models.txt
+
+.end
+   
+

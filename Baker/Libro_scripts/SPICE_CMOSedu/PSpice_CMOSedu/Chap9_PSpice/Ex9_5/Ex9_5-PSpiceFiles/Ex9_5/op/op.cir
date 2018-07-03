@@ -1,0 +1,20 @@
+** Profile: "Ex9_5-op"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Ex9_5\Ex9_5-pspicefiles\Ex9_5\op.sim ] 
+
+** Creating circuit file "op.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Ex9_5-pspicefiles/Ex9_5.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Ex9_5.net" 
+
+
+.END

@@ -1,0 +1,21 @@
+** Profile: "Fig6_19_NMOS_ID_VDS-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap6_PSpice\Fig6_19_NMOS_ID_VDS\Fig6_19_nmos_id_vds-pspicefiles\Fig6_19_nmos_id_vds\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig6_19_nmos_id_vds-pspicefiles/Fig6_19_nmos_id_vds.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_VDS 0 1 0.01 
++ LIN V_VGS 0 1 250m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig6_19_NMOS_ID_VDS.net" 
+
+
+.END

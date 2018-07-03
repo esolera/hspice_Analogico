@@ -1,0 +1,5 @@
+* source _FIG1_17_AC_MSD
+T_T1         VIN 0 N01155 0 Z0=50 TD=10ns  
+R_R1         0 N01155  50 TC=0,0 
+V_Vin         VIN 0 DC 0Vdc AC 1Vac 
+E_E1         VOUT VIN N01155 0 1

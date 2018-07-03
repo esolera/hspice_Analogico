@@ -1,0 +1,7 @@
+* source FIG10_12_NMOS_LONG
+V_Vin         VIN 0  
++PULSE 0 5 200p 100p 
+M_M1         VOUT VIN 0 0 N_1u  
++ L=1u  
++ W=10u         
+C_C1         VOUT 0  50f IC=5 TC=0,0 

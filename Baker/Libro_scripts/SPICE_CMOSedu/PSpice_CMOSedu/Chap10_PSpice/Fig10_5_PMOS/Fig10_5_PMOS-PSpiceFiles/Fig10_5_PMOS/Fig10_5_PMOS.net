@@ -1,0 +1,7 @@
+* source FIG10_5_PMOS
+M_M1         N02527 N02491 N02495 N02495 P_1u  
++ L=1u  
++ W=10u         
+V_VSD         N02495 N02527 DC 0  
+V_VDD         N02495 0 DC 5  
+V_VSG         N02495 N02491 DC 0  

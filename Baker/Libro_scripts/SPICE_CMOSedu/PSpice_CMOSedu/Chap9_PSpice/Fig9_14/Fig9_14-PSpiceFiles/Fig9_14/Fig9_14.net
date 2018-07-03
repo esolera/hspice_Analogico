@@ -1,0 +1,7 @@
+* source FIG9_14
+M_M1         N00524 N00488 N02562 0 N_1u  
++ L=1u  
++ W=10u         
+V_Vin         N00488 0 DC 2.5 AC 1m 
+V_VDD         N00524 0 DC 5  
+R_R1         0 N02562  10MEG TC=0,0 

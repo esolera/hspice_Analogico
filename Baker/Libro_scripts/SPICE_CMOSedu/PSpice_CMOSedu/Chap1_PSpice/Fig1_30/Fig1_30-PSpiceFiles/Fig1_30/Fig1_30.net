@@ -1,0 +1,6 @@
+* source FIG1_30
+X_U1         VIN N00129 Sw_tClose PARAMS: tClose=2n ttran=1p Rclosed=0.01
++  Ropen=1Meg
+V_Vin         VIN 0 DC 5V AC 0 0
+R_R1         N00129 VOUT  1k TC=0,0 
+C_C1         0 VOUT  1p IC=2 TC=0,0 

@@ -1,0 +1,65 @@
+(ExpressProject "Fig1_23"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File "Fig1_23.dsn"
+      (Type "Schematic Design")
+      (DisplayName ".\Fig1_23.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\Fig1_23-pspicefiles\Fig1_23\Fig1_23.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\fig1_23-pspicefiles\fig1_23\ac.sim"
+        (DisplayName "Fig1_23-AC")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\fig1_23-pspicefiles\fig1_23\ac.sim"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSRC
+      (FullPartName "VSRC.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "jbaker")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_23\Fig1_23.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_23\Fig1_23.dsn"
+         "Fig1_23")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_23\Fig1_23.dsn"
+         "Fig1_23" "Fig1_23"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 431"))
+      (Tab 0))))

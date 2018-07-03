@@ -1,0 +1,6 @@
+* source FIG9_31
+V_VGS         N02631 0 DC 350m  
+V_VDS         N02615 0 DC 0  
+M_M1         N02615 N02631 0 0 N_50n  
++ L=100n  
++ W=2.5u         

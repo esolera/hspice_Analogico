@@ -1,0 +1,6 @@
+* source FIG9_24_NMOS
+M_M1         N00524 N00488 0 0 N_1u  
++ L=2u  
++ W=10u         
+V_VGS         N00488 0 DC 1.05 AC 1m 
+V_VDS         N00524 0 DC 5  

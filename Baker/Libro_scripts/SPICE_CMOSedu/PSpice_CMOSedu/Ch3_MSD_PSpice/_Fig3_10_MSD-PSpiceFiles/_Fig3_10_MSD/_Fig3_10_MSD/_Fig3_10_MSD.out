@@ -1,0 +1,108 @@
+
+**** 07/03/13 17:13:33 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig3_10_MSD-_Fig3_10_MSD"  [ C:\Users\jbaker\Desktop\Ch3_MSD_PSpice\_fig3_10_msd-pspicefiles\_fig3_10_msd\_fig3_10_msd
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig3_10_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10k 100meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\_Fig3_10_MSD.net" 
+
+
+
+**** INCLUDING _Fig3_10_MSD.net ****
+* source _FIG3_10_MSD
+R_RIB         VINM N01998  100k TC=0,0 
+R_RIT         VINP N02014  100k TC=0,0 
+V_Vinp         VINP 0 DC .5Vdc AC .5Vac 
+V_Vinm         VINM 0 DC .5Vdc AC -.5Vac 
+R_RFB         VOUTP N01998  100k TC=0,0 
+C_C1         N02014 VOUTM  10p  TC=0,0 
+C_C2         N01998 VOUTP  10p  TC=0,0 
+V_VCM         VCM 0 DC .5  
+R_RFT         VOUTM N02014  100k TC=0,0 
+E_U1_E1         U1_N03437 U1_N03443 N01998 N02014 1e4
+E_U1_E5         VOUTP 0 U1_N03463 0 1
+C_U1_C1         0 U1_N03427  159n  TC=0,0 
+E_U1_E2         U1_N03443 U1_N03431 N01998 N02014 1e4
+C_U1_C2         U1_N03463 0  159n  TC=0,0 
+E_U1_E3         U1_N03443 0 VCM 0 1
+R_U1_R1         U1_N03437 U1_N03427  1k TC=0,0 
+R_U1_R2         U1_N03431 U1_N03463  1k TC=0,0 
+E_U1_E4         VOUTM 0 U1_N03427 0 1
+
+**** RESUMING _Fig3_10_MSD.cir ****
+.END
+
+**** 07/03/13 17:13:33 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig3_10_MSD-_Fig3_10_MSD"  [ C:\Users\jbaker\Desktop\Ch3_MSD_PSpice\_fig3_10_msd-pspicefiles\_fig3_10_msd\_fig3_10_msd
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCM)     .5000  ( VINM)     .5000  ( VINP)     .5000  (VOUTM)     .5000      
+
+(VOUTP)     .5000  (N01998)     .5000 (N02014)     .5000 (U1_N03427)     .5000  
+
+(U1_N03431)     .5000                 (U1_N03437)     .5000                     
+
+(U1_N03443)     .5000                 (U1_N03463)     .5000                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vinp      -2.578E-18
+    V_Vinm      -2.578E-18
+    V_VCM        0.000E+00
+
+    TOTAL POWER DISSIPATION   2.58E-18  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/03/13 17:13:33 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "_Fig3_10_MSD-_Fig3_10_MSD"  [ C:\Users\jbaker\Desktop\Ch3_MSD_PSpice\_fig3_10_msd-pspicefiles\_fig3_10_msd\_fig3_10_msd
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

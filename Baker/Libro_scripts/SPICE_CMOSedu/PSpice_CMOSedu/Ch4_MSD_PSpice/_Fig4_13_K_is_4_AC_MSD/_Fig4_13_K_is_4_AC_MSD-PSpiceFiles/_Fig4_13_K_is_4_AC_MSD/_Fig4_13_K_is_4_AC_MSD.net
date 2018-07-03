@@ -1,0 +1,9 @@
+* source _FIG4_13_K_IS_4_AC_MSD
+R_R2         0 N25598  50 TC=0,0 
+T_T2         N25598 0 VOUT 0 Z0=50 TD=10n  
+T_T1         N25580 0 N25570 0 Z0=50 TD=40n  
+R_R1         0 N25570  50 TC=0,0 
+V_V1         N25580 0 DC 0Vdc AC 1Vac 
+E_E3         N25602 0 0 N25598 1
+E_E1         N25608 0 N25580 N25570 1
+E_E2         VOUT 0 N25608 N25602 1

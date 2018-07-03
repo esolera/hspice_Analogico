@@ -1,0 +1,121 @@
+
+**** 06/29/13 10:56:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig5_2-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap5_PSpice\Fig5_2\Fig5_2-pspicefiles\Fig5_2\dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig5_2-pspicefiles/Fig5_2.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_Vr 0.9 1.1 0.01 
+.TEMP 0 27 100
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig5_2.net" 
+
+
+
+**** INCLUDING Fig5_2.net ****
+* source FIG5_2
+V_Vr         VR 0 DC 1  
+R_R1         0 VR  10k TC=0.0024,0 
+
+**** RESUMING dc.cir ****
+.END
+
+**** 06/29/13 10:56:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig5_2-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap5_PSpice\Fig5_2\Fig5_2-pspicefiles\Fig5_2\dc.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** RESISTORS
+
+                  R_R1 < >    
+
+          R        9.352E+03  
+
+
+
+**** 06/29/13 10:56:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig5_2-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap5_PSpice\Fig5_2\Fig5_2-pspicefiles\Fig5_2\dc.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** RESISTORS
+
+                  R_R1 < >    
+
+          R        1.000E+04  
+
+
+
+**** 06/29/13 10:56:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig5_2-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap5_PSpice\Fig5_2\Fig5_2-pspicefiles\Fig5_2\dc.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  100.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** RESISTORS
+
+                  R_R1 < >    
+
+          R        1.175E+04  
+
+
+
+
+          JOB CONCLUDED
+
+**** 06/29/13 10:56:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig5_2-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap5_PSpice\Fig5_2\Fig5_2-pspicefiles\Fig5_2\dc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

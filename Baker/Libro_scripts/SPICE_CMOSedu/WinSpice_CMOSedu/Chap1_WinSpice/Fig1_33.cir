@@ -1,0 +1,22 @@
+*** Figure 1.33 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot db(vout/vin)
+*#set units=degrees
+*#plot ph(vout/vin)
+
+.ac dec 100 1 10k
+
+Vin	Vin	0	DC	1	AC 1
+Rin	Vin	vm	1k
+Cf	Vout	vm	1u
+
+X1	Vout	0	vm	Ideal_op_amp
+
+.subckt	Ideal_op_amp	Vout	Vp	Vm
+G1	Vout	0	Vm	Vp	1MEG
+RL	Vout	0	1
+.ends
+
+.end

@@ -1,0 +1,4 @@
+* source EX8_5
+V_Vin         N02329 0 DC 0 AC 1 0
+R_R1         VOUT N02329  10k TC=0,0 
+R_R2         0 VOUT  1k TC=0,0 

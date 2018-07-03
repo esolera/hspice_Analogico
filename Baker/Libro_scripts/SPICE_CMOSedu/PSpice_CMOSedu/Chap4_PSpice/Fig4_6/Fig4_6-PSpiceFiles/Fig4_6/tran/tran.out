@@ -1,0 +1,49 @@
+
+**** 06/29/13 10:55:45 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig4_6-tran"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap4_PSpice\Fig4_6\Fig4_6-pspicefiles\Fig4_6\tran.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 2500p 0 1p 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig4_6.net" 
+
+
+
+**** INCLUDING Fig4_6.net ****
+* source FIG4_6
+V_Vin         VIN 0  
++PULSE 0 1 50p 
+X_poly_nosilicide         VIN VOUT1 0 TLUMP128 PARAMS: LEN=1000 R=200 L=0 G=0
++  C=9e-18
+X_poly_silicide         VIN VOUT2 0 TLUMP128 PARAMS: LEN=1000 R=5 L=0 G=0
++  C=9e-18
+R_Rload1         0 VOUT1  1G TC=0,0 
+R_Rload2         0 VOUT2  1G TC=0,0 
+
+**** RESUMING tran.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit TLUMP128 used by X_poly_nosilicide is undefined
+
+ERROR(ORPSIM-15108): Subcircuit TLUMP128 used by X_poly_silicide is undefined
+

@@ -1,0 +1,193 @@
+
+**** 07/02/13 15:51:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig9_29-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_29_PMOS\fig9_29_pmos-pspicefiles\fig9_29\dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../fig9_29_pmos-pspicefiles/fig9_29_pmos.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_VSG 0.8 1.8 1m 
+.TEMP 0 50 100
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig9_29.net" 
+
+
+
+**** INCLUDING Fig9_29.net ****
+* source FIG9_29_PMOS
+V_VSG         0 N04041 DC 0 AC 1m 
+M_M1         N04015 N04041 0 N04132 P_1u  
++ L=2u  
++ W=30u         
+V_VSD         0 N04015 DC 2  
+V_VBS         N04132 0 DC 0  
+
+**** RESUMING dc.cir ****
+.END
+
+**** 07/02/13 15:51:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig9_29-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_29_PMOS\fig9_29_pmos-pspicefiles\fig9_29\dc.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               P_1u            
+               PMOS            
+       LEVEL    3            
+         TPG   -1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+          LD  100.000000E-09 
+         VTO    -.9          
+          KP   40.000000E-06 
+       GAMMA     .6          
+         PHI     .7          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB    1            
+        PBSW    1            
+          CJ  400.000000E-06 
+        CJSW  300.000000E-12 
+        MJSW     .5          
+        CGSO  200.000000E-12 
+        CGDO  200.000000E-12 
+        CGBO  100.000000E-12 
+        NSUB  100.000000E+15 
+         NFS    1.000000E+12 
+         TOX   20.000000E-09 
+          XJ  500.000000E-09 
+          UO  250            
+       UCRIT   10.000000E+03 
+        VMAX   50.000000E+03 
+       DELTA     .1          
+       THETA     .1          
+         ETA    0            
+       KAPPA    1            
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 07/02/13 15:51:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig9_29-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_29_PMOS\fig9_29_pmos-pspicefiles\fig9_29\dc.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    P_1u      
+
+        VTO       -9.469E-01  
+        PHI        7.510E-01  
+         PB        1.024E+00  
+     IS(JS)        1.048E-16  
+         KP        4.608E-05  
+         UO        2.880E+02  
+
+
+**** 07/02/13 15:51:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig9_29-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_29_PMOS\fig9_29_pmos-pspicefiles\fig9_29\dc.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    P_1u      
+
+        VTO       -8.586E-01  
+        PHI        6.557E-01  
+         PB        9.787E-01  
+     IS(JS)        2.698E-13  
+         KP        3.581E-05  
+         UO        2.238E+02  
+
+
+**** 07/02/13 15:51:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig9_29-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_29_PMOS\fig9_29_pmos-pspicefiles\fig9_29\dc.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  100.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    P_1u      
+
+        VTO       -7.637E-01  
+        PHI        5.570E-01  
+         PB        9.299E-01  
+     IS(JS)        8.866E-11  
+         KP        2.886E-05  
+         UO        1.804E+02  
+
+
+
+          JOB CONCLUDED
+
+**** 07/02/13 15:51:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig9_29-dc"  [ C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_29_PMOS\fig9_29_pmos-pspicefiles\fig9_29\dc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

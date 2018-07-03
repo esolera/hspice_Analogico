@@ -1,0 +1,97 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("MbreakN4")
+        ("VSRC")
+    )
+    ("instances"
+        ("M1"
+            ("device_name"	"MbreakN4")
+            ("pspice_path"	"M_M1")
+            ("level"	"0")
+            ("model_params"
+                ("L"
+                    ("value"	"100n")
+                    ("pspice_param"	"L")
+                )
+                ("W"
+                    ("value"	"500n")
+                    ("pspice_param"	"W")
+                )
+                ("AD"
+                    ("value"	"")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+            )
+        )
+        ("VGS"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_VGS")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"1.05")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"1m")
+                    ("pspice_param"	"AC")
+                )
+                ("TRAN"
+                    ("value"	"")
+                    ("pspice_param"	"TRAN")
+                )
+            )
+        )
+        ("VDS"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_VDS")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"100m")
+                    ("pspice_param"	"DC")
+                )
+                ("TRAN"
+                    ("value"	"")
+                    ("pspice_param"	"TRAN")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+            )
+        )
+    )
+)

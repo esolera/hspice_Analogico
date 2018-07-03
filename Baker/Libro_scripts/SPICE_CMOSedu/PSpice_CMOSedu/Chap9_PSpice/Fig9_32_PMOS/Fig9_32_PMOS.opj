@@ -1,0 +1,51 @@
+(ExpressProject "Fig9_32_PMOS"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\Fig9_32_pmos.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\Fig9_32_pmos-pspicefiles\Fig9_32_pmos\Fig9_32_pmos.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\Fig9_32_pmos-pspicefiles\Fig9_32_pmos\dc.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\Fig9_32_pmos-pspicefiles\Fig9_32_pmos\dc.sim"
+        (DisplayName "Fig9_32_PMOS-dc")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\Fig9_32_pmos-pspicefiles\Fig9_32_pmos.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\Fig9_32_pmos-pspicefiles\Fig9_32_pmos.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_32_PMOS\Fig9_32_pmos.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_32_PMOS\Fig9_32_pmos.dsn"
+         "Fig9_32_PMOS")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap9_PSpice\Fig9_32_PMOS\Fig9_32_pmos.dsn"
+         "Fig9_32_PMOS" "Fig9_32_PMOS"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 431"))
+      (Tab 0)))
+  (MPSSessionName "jbaker"))

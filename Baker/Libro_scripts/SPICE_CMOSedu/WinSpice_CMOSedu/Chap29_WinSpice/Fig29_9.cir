@@ -1,0 +1,68 @@
+*** Figure 29.9 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot voutp voutm
+
+*** CELL: Ideal_Switch{sch}
+.SUBCKT Ideal_Switch contrlm contrlp in out
+
+* Spice Code nodes in cell cell 'Ideal_Switch{sch}'
+Sswitch  in out  contrlp contrlm  switmod
+.model switmod sw
+.ENDS Ideal_Switch
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Fig29_9{sch}
+Rres@0 vdd Voutp 100000
+Rres@1 vdd Voutm 100000
+IDCCurren@1 net@613 gnd DC 10uA
+IDCCurren@2 net@624 gnd DC 10uA
+IDCCurren@3 net@635 gnd DC 10uA
+IDCCurren@4 net@646 gnd DC 10uA
+IDCCurren@5 net@657 gnd DC 10uA
+IDCCurren@6 net@668 gnd DC 10uA
+IDCCurren@7 net@679 gnd DC 10uA
+IDCCurren@8 net@718 gnd DC 10uA
+XIdeal_Sw@6 Vtrip D7 Voutm net@613 Ideal_Switch
+XIdeal_Sw@7 Vtrip D7i Voutp net@613 Ideal_Switch
+XIdeal_Sw@8 Vtrip D6 Voutm net@624 Ideal_Switch
+XIdeal_Sw@9 Vtrip D6i Voutp net@624 Ideal_Switch
+XIdeal_Sw@10 Vtrip D5 Voutm net@635 Ideal_Switch
+XIdeal_Sw@11 Vtrip D5i Voutp net@635 Ideal_Switch
+XIdeal_Sw@12 Vtrip D4 Voutm net@646 Ideal_Switch
+XIdeal_Sw@13 Vtrip D4i Voutp net@646 Ideal_Switch
+XIdeal_Sw@14 Vtrip D3 Voutm net@657 Ideal_Switch
+XIdeal_Sw@15 Vtrip D3i Voutp net@657 Ideal_Switch
+XIdeal_Sw@16 Vtrip D2 Voutm net@668 Ideal_Switch
+XIdeal_Sw@17 Vtrip D2i Voutp net@668 Ideal_Switch
+XIdeal_Sw@18 Vtrip D1 Voutm net@679 Ideal_Switch
+XIdeal_Sw@19 Vtrip D1i Voutp net@679 Ideal_Switch
+XIdeal_Sw@20 Vtrip D0 Voutm net@718 Ideal_Switch
+XIdeal_Sw@21 Vtrip D0i Voutp net@718 Ideal_Switch
+
+* Spice Code nodes in cell cell 'Fig29_9{sch}'
+VDD VDD 0 DC 5
+Vtrip Vtrip 0 DC 2.5
+VGND GND 0 DC 0
+VD0 D0 0 DC 0 PULSE(0 5 5n 100p)
+VD0i D0i 0 DC 0 PULSE(5 0 5n 100p)
+VD1 D1 0 DC 0 PULSE(0 5 10n 100p)
+VD1i D1i 0 DC 0 PULSE(5 0 10n 100p)
+VD2 D2 0 DC 0 PULSE(0 5 15n 100p)
+VD2i D2i 0 DC 0 PULSE(5 0 15n 100p)
+VD3 D3 0 DC 0 PULSE(0 5 20n 100p)
+VD3i D3i 0 DC 0 PULSE(5 0 20n 100p)
+VD4 D4 0 DC 0 PULSE(0 5 25n 100p)
+VD4i D4i 0 DC 0 PULSE(5 0 25n 100p)
+VD5 D5 0 DC 0 PULSE(0 5 30n 100p)
+VD5i D5i 0 DC 0 PULSE(5 0 30n 100p)
+VD6 D6 0 DC 0 PULSE(0 5 35n 100p)
+VD6i D6i 0 DC 0 PULSE(5 0 35n 100p)
+VD7 D7 0 DC 0 PULSE(0 5 40n 100p)
+VD7i D7i 0 DC 0 PULSE(5 0 40n 100p)
+.options post
+.options plotwinsize=0
+.tran 10p 45n 10p .1n uic
+.END

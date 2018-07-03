@@ -1,0 +1,5 @@
+* source _FIG1_25_K_IS_4_AC_MSD
+R_R1         0 N02132  50 TC=0,0 
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+E_E1         VOUT 0 VIN N02132 1
+T_T1         VIN 0 N02132 0 Z0=50 TD=40ns  

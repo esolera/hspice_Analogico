@@ -1,0 +1,5 @@
+* source FIG1_23
+R_R1         VIN VOUT  1k TC=0,0 
+V_Vin         VIN 0  AC 1
++SIN 0 1 200 0 0 0
+C_C1         0 VOUT  1u  TC=0,0 

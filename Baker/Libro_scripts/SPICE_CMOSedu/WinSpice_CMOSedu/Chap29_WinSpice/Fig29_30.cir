@@ -1,0 +1,154 @@
+*** Figure 29.30 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vin vout
+
+*** CELL: Ideal_Switch{sch}
+.SUBCKT Ideal_Switch contrlm contrlp in out
+
+* Spice Code nodes in cell cell 'Ideal_Switch{sch}'
+Sswitch  in out  contrlp contrlm  switmod
+.model switmod sw
+.ENDS Ideal_Switch
+
+*** CELL: Ideal_DACbit{sch}
+.SUBCKT Ideal_DACbit Bitin Bitout Vone Vtrip
+** GLOBAL gnd
+Xideal_sw@0 Bitin Vtrip Bitout gnd Ideal_Switch
+Xideal_sw@1 Vtrip Bitin Vone Bitout Ideal_Switch
+.ENDS Ideal_DACbit
+
+*** CELL: Ideal_3Bit_DAC{sch}
+.SUBCKT Ideal_3Bit_DAC B0 B1 B2 VREFM VREFP Vout vdd
+** GLOBAL gnd
+Rres@0 vdd Vtrip 100000k
+Rres@1 Vtrip gnd 100000k
+Rres@2 VREFP VREFM 100000k
+XIdeal_DA@3 B2 B2L Vone Vtrip Ideal_DACbit
+XIdeal_DA@6 B1 B1L Vone Vtrip Ideal_DACbit
+XIdeal_DA@9 B0 B0L Vone Vtrip Ideal_DACbit
+
+* Spice Code nodes in cell cell 'Ideal_3Bit_DAC{sch}'
+Vone Vone 0 DC 1
+B1 Vout 0 V=((v(vrefp)-v(vrefm))/8)*(v(B2L)*4+v(B1L)*2+v(B0L))+v(vrefm)
+.ENDS Ideal_3Bit_DAC
+
+*** CELL: Ideal_Differencer_0.5{sch}
+.SUBCKT Ideal_Differencer_0_5 im ip om op
+
+* Spice Code nodes in cell cell 'Ideal_Differencer_0.5{sch}'
+E  op  om  ip  im  0.5
+.ENDS Ideal_Differencer_0_5
+
+*** CELL: Ideal_Opamp{sch}
+.SUBCKT Ideal_Opamp Vm Vo Vp
+** GLOBAL gnd
+Rres@0 Vp Vm 1410.065meg
+Rres@1 Vo gnd 1
+
+* Spice Code nodes in cell cell 'Ideal_Opamp{sch}'
+G1 Vo 0  Vp  Vm 100MEG
+.ENDS Ideal_Opamp
+
+*** CELL: Ideal_Sample&Hold{sch}
+.SUBCKT Ideal_Sample_Hold Vclk Vin Voutsh vdd
+** GLOBAL gnd
+Ccap@0 gnd Vins 0.1n
+Ccap@1 gnd net@32 0.1f
+Rres@0 vdd Vtrip 100000k
+Rres@1 Vtrip gnd 100000k
+XIdeal_sw@0 Vclk Vtrip Vinb Vins Ideal_Switch
+XIdeal_sw@1 Vtrip Vclk Vins net@32 Ideal_Switch
+Xideal_op@0 Voutsh Voutsh net@32 Ideal_Opamp
+Xideal_op@1 Vinb Vinb Vin Ideal_Opamp
+.ENDS Ideal_Sample_Hold
+
+*** CELL: Ideal_DFF{sch}
+.SUBCKT Ideal_DFF D Q Qi clk vdd
+** GLOBAL gnd
+XIdeal_Di@0 gnd vdd gnd Vtrip Ideal_Differencer_0_5
+XIdeal_Sa@0 clk D Vshp vdd Ideal_Sample_Hold
+XIdeal_Sw@0 Vtrip Vshp vdd Q Ideal_Switch
+XIdeal_Sw@1 Vshp Vtrip Q gnd Ideal_Switch
+XIdeal_Sw@2 Vshp Vtrip vdd Qi Ideal_Switch
+XIdeal_Sw@3 Vtrip Vshp Qi gnd Ideal_Switch
+.ENDS Ideal_DFF
+
+*** CELL: Ideal_Differencer_1{sch}
+.SUBCKT Ideal_Differencer_1 im ip om op
+
+* Spice Code nodes in cell cell 'Ideal_Differencer_1{sch}'
+E  op  om  ip  im  1
+.ENDS Ideal_Differencer_1
+
+*** CELL: Ideal_Differencer_2{sch}
+.SUBCKT Ideal_Differencer_2 im ip om op
+
+* Spice Code nodes in cell cell 'Ideal_Differencer_2{sch}'
+E  op  om  ip  im  2
+.ENDS Ideal_Differencer_2
+
+*** CELL: Ideal_clocked_comparator{sch}
+.SUBCKT Ideal_clocked_comparator Clock Vinm Vinp Vout vdd
+** GLOBAL gnd
+XIdeal_Di@1 Vinm Vinp gnd net@23 Ideal_Differencer_1
+XIdeal_Sa@0 Clock net@23 net@1 vdd Ideal_Sample_Hold
+XIdeal_Sw@0 gnd net@1 vdd Vout Ideal_Switch
+XIdeal_Sw@1 net@1 gnd Vout gnd Ideal_Switch
+.ENDS Ideal_clocked_comparator
+
+*** CELL: Ideal_inverter{sch}
+.SUBCKT Ideal_inverter In Out vdd
+** GLOBAL gnd
+XIdeal_Di@1 gnd vdd gnd net@8 Ideal_Differencer_0_5
+XIdeal_Sw@0 In net@8 vdd Out Ideal_Switch
+XIdeal_Sw@1 net@8 In Out gnd Ideal_Switch
+.ENDS Ideal_inverter
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Fig29_30{sch}
+Ccap@0 gnd net@258 1p
+Ccap@1 gnd net@355 1p
+Ccap@2 gnd net@503 1p
+Rres@0 net@258 net@255 100
+Rres@1 net@355 net@352 100
+Rres@2 net@503 net@497 500
+XIdeal_3B@0 D0 D1 D2 gnd vdd Vout vdd Ideal_3Bit_DAC
+XIdeal_DF@0 net@310 net@285 Ideal_DF@0_Qi clock vdd Ideal_DFF
+XIdeal_DF@1 net@285 net@288 Ideal_DF@1_Qi clock vdd Ideal_DFF
+XIdeal_DF@2 net@288 D2 Ideal_DF@2_Qi clock vdd Ideal_DFF
+XIdeal_DF@3 net@335 net@371 Ideal_DF@3_Qi clock vdd Ideal_DFF
+XIdeal_DF@4 net@371 D1 Ideal_DF@4_Qi clock vdd Ideal_DFF
+XIdeal_DF@5 net@474 D0 Ideal_DF@5_Qi clock vdd Ideal_DFF
+XIdeal_Di@6 net@303 net@270 gnd Out1 Ideal_Differencer_1
+XIdeal_Di@7 gnd Out1 gnd net@255 Ideal_Differencer_2
+XIdeal_Di@8 net@382 net@416 gnd net@447 Ideal_Differencer_1
+XIdeal_Di@9 gnd net@447 gnd net@352 Ideal_Differencer_2
+XIdeal_Sa@0 clock Vin net@270 vdd Ideal_Sample_Hold
+XIdeal_Sa@6 clock net@258 net@416 vdd Ideal_Sample_Hold
+XIdeal_Sa@8 clock net@355 net@444 vdd Ideal_Sample_Hold
+XIdeal_Sw@0 Vtrip net@310 net@303 VCM Ideal_Switch
+XIdeal_Sw@1 Vtrip net@328 net@303 gnd Ideal_Switch
+XIdeal_Sw@2 Vtrip net@335 net@382 VCM Ideal_Switch
+XIdeal_Sw@3 Vtrip net@340 net@382 gnd Ideal_Switch
+XIdeal_cl@0 clocki VCM net@270 net@310 VDD Ideal_clocked_comparator
+XIdeal_cl@1 clocki VCM net@416 net@335 VDD Ideal_clocked_comparator
+XIdeal_cl@2 clocki VCM net@444 net@474 VDD Ideal_clocked_comparator
+XIdeal_in@0 net@310 net@328 VDD Ideal_inverter
+XIdeal_in@1 net@335 net@340 VDD Ideal_inverter
+XIdeal_in@2 clock net@497 vdd Ideal_inverter
+XIdeal_in@3 net@503 clocki vdd Ideal_inverter
+
+* Spice Code nodes in cell cell 'Fig29_30{sch}'
+VDD VDD 0 DC 5
+Vtrip Vtrip 0 DC 2.5
+VCM VCM 0 DC 2.5
+VGND GND 0 DC 0
+Vin Vin 0 DC 0 SINE(2.5 2 2MEG)
+Vclock clock 0 DC 0 PULSE(0 5 5n 100p 100p 4.9n 10n)
+.options post
+.options plotwinsize=0
+.tran 10p 1000n 10p .1n uic
+.END

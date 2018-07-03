@@ -1,0 +1,101 @@
+
+**** 06/12/13 19:46:47 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_37_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_37_MSD\_fig3_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig3_37_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 10k 100meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source _FIG3_37_MSD
+R_R1         VIN N00416  1.414k TC=0,0 
+L_L1         N00416 VOUT1  100uH  
+C_C1         VOUT1 0  100p   
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+C_C2         VOUT2 0  100p   
+L_L2         N00683 VOUT2  100uH  
+R_R2         VIN N00683  2k TC=0,0 
+R_R3         VIN N00957  5k TC=0,0 
+C_C3         VOUT3 0  100p   
+L_L3         N00957 VOUT3  100uH  
+L_L4         N01238 VOUT4  100uH  
+R_R4         VIN N01238  1k TC=0,0 
+C_C4         VOUT4 0  100p   
+L_L5         N01526 VOUT5  100uH  
+R_R5         VIN N01526  200 TC=0,0 
+C_C5         VOUT5 0  100p   
+
+**** RESUMING _Fig3_37_MSD.cir ****
+.END
+
+**** 06/12/13 19:46:47 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_37_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_37_MSD\_fig3_
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  (VOUT1)    0.0000  (VOUT2)    0.0000  (VOUT3)    0.0000      
+
+(VOUT4)    0.0000  (VOUT5)    0.0000  (N00416)    0.0000 (N00683)    0.0000     
+
+(N00957)    0.0000 (N01238)    0.0000 (N01526)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/12/13 19:46:47 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_37_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_37_MSD\_fig3_
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+

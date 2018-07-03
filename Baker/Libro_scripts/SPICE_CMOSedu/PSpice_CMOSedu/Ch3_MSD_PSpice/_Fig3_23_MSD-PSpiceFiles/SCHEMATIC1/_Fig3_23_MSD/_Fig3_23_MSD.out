@@ -1,0 +1,117 @@
+
+**** 06/06/13 00:06:35 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_23_MSD"  [ C:\USERS\HOMEPC\DOCUMENTS\SPRING 2013\PSPICE_CMOSEDU\MSD\CH3_MSD_PSPICE\_FIg3_23_MSD-PSpice
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig3_23_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2000ns 0 .01n SKIPBP 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source _FIG3_23_MSD
+V_Vphi1         VPHI1 0  
++PULSE 0 1 0 200p 200p 4n 10n
+V_Vphi2         VPHI2 0  
++PULSE 0 1 5n 200p 200p 4n 10n
+V_VDD         VDD 0 DC 1  
+V_VCM         VCM 0 DC .5  
+G_U1_G1         0 VOUT VCM N02284 1Meg
+R_U1_R1         0 VOUT  1 TC=0,0 
+R_U2_R1         0 U2_VTRIP  100Meg TC=0,0 
+R_U2_R2         U2_VTRIP VDD  100Meg TC=0,0 
+X_U2_S1    VPHI1 U2_VTRIP VOUT N02251 SCHEMATIC1_U2_S1 
+X_U2_S2    VPHI2 U2_VTRIP N02251 N02284 SCHEMATIC1_U2_S2 
+R_U3_R1         0 U3_VTRIP  100Meg TC=0,0 
+R_U3_R2         U3_VTRIP VDD  100Meg TC=0,0 
+X_U3_S1    VPHI4 U3_VTRIP VIN N02255 SCHEMATIC1_U3_S1 
+X_U3_S2    VPHI2 U3_VTRIP N02255 VCM SCHEMATIC1_U3_S2 
+C_Cl         N02255 N02251  1p  TC=0,0 
+C_C1         N02284 VOUT  10p  TC=0,0 
+V_Vin         VIN 0  
++SIN .5 500m 1.59Meg 0 0 0
+
+.subckt SCHEMATIC1_U2_S1 1 2 3 4  
+S_U2_S1         3 4 1 2 _U2_S1
+RS_U2_S1         1 2 1G
+.MODEL         _U2_S1 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=0.5V
+.ends SCHEMATIC1_U2_S1
+
+.subckt SCHEMATIC1_U2_S2 1 2 3 4  
+S_U2_S2         3 4 1 2 _U2_S2
+RS_U2_S2         1 2 1G
+.MODEL         _U2_S2 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=0.5V
+.ends SCHEMATIC1_U2_S2
+
+.subckt SCHEMATIC1_U3_S1 1 2 3 4  
+S_U3_S1         3 4 1 2 _U3_S1
+RS_U3_S1         1 2 1G
+.MODEL         _U3_S1 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=0.5V
+.ends SCHEMATIC1_U3_S1
+
+.subckt SCHEMATIC1_U3_S2 1 2 3 4  
+S_U3_S2         3 4 1 2 _U3_S2
+RS_U3_S2         1 2 1G
+.MODEL         _U3_S2 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=0.5V
+.ends SCHEMATIC1_U3_S2
+
+**** RESUMING _Fig3_23_MSD.cir ****
+.END
+
+**** 06/06/13 00:06:35 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_23_MSD"  [ C:\USERS\HOMEPC\DOCUMENTS\SPRING 2013\PSPICE_CMOSEDU\MSD\CH3_MSD_PSPICE\_FIg3_23_MSD-PSpice
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2_S1._U2_S1  X_U2_S2._U2_S2  X_U3_S1._U3_S1  X_U3_S2._U3_S2  
+         RON    1               1               1               1            
+        ROFF    1.000000E+06    1.000000E+06    1.000000E+06    1.000000E+06 
+         VON     .5              .5              .5              .5          
+        VOFF    0               0               0               0            
+
+
+
+          JOB CONCLUDED
+
+**** 06/06/13 00:06:35 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_23_MSD"  [ C:\USERS\HOMEPC\DOCUMENTS\SPRING 2013\PSPICE_CMOSEDU\MSD\CH3_MSD_PSPICE\_FIg3_23_MSD-PSpice
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       10.28
+

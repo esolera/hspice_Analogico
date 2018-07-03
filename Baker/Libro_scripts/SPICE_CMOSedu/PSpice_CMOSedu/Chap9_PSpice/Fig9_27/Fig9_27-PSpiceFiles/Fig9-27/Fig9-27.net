@@ -1,0 +1,6 @@
+* source FIG9_27
+M_M1         N00524 N00488 0 0 N_50n  
++ L=100n  
++ W=500n         
+V_VGS         N00488 0 DC 1.05 AC 1m 
+V_VDS         N00524 0 DC 100m  

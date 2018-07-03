@@ -1,0 +1,292 @@
+
+**** 07/02/13 16:14:28 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig10_19_PMOS-tran"  [ C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_19_PMOS\Fig10_19_pmos-pspicefiles\Fig10_19_pmos\tran
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig10_19_pmos-pspicefiles/Fig10_19_pmos.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2.5n 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig10_19_PMOS.net" 
+
+
+
+**** INCLUDING Fig10_19_PMOS.net ****
+* source FIG10_19_PMOS
+V_VDD         VDD 0 DC 1  
+C_C1         VOUT 0  50f  TC=0,0 
+V_Vin         VIN 0  
++PULSE 1 0 500p 0 0 1n 3n
+M_M1         VOUT 0 VIN VDD P_50n  
++ L=50n  
++ W=1u         
+
+**** RESUMING tran.cir ****
+.END
+
+WARNING(ORPSIM-15623): model P_50n: Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored
+
+WARNING(ORPSIM-15499): Mosfet M_M1, model P_50n: Toxp = 7e-010 is less than 10A
+
+WARNING(ORPSIM-15532): Acde = 0.290715 is too small
+
+WARNING(ORPSIM-15535): Mosfet M_M1, model P_50n: Leff = 2.6e-008 may be too small
+
+WARNING(ORPSIM-15536): Mosfet M_M1, model P_50n: Leff for CV = 2.6e-008 may be too small
+
+**** 07/02/13 16:14:28 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig10_19_PMOS-tran"  [ C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_19_PMOS\Fig10_19_pmos-pspicefiles\Fig10_19_pmos\tran
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               P_50n           
+               PMOS            
+  T_Measured   27            
+   T_Current   27            
+       LEVEL    8            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    -.22         
+          KP  138.125800E-06 
+       GAMMA    0            
+      LAMBDA    0            
+         RSH    3            
+          IS    1.000000E-15 
+          JS  100.000000E-06 
+          PB    1            
+        PBSW    1            
+          CJ  500.000000E-06 
+        CJSW  500.000000E-12 
+        CGSO  743.000000E-12 
+        CGDO  743.000000E-12 
+        CGBO   25.600000E-12 
+         TOX   15.000000E-09 
+          XJ   20.000000E-09 
+       UCRIT   10.000000E+03 
+       DELTA     .014        
+      DIOMOD    1            
+         VFB     .55         
+          K1     .39         
+          K2     .05         
+        LETA    0            
+        WETA    0            
+          U0    9.500000E-03 
+       XPART    0            
+        VTH0    -.22         
+          K3    0            
+        DVT0    3.9          
+        DVT1     .635        
+          UA    1.600000E-09 
+          UB    8.000000E-18 
+          UC  460.000000E-15 
+        VSAT   90.000000E+03 
+        RDSW  250            
+        VOFF    -.15         
+     NFACTOR    2            
+        CDSC  258.000000E-06 
+        PCLM     .55         
+      PDIBL1     .03         
+      PDIBL2    5.500000E-03 
+      PSCBE1  814.000000E+06 
+      PSCBE2  958.000000E-09 
+          A0    1.2          
+          A1    0            
+          A2    1            
+         LDD    0            
+        LITL   30.000000E-09 
+         KT1    -.19         
+         KT2    -.052        
+         UA1   -1.000000E-09 
+         UB1    2.000000E-18 
+         UC1    0            
+        PVAG   10.000000E-21 
+        ETA0     .15         
+        ETAB    0            
+        DSUB     .7          
+       NGATE  500.000000E+18 
+      MOBMOD    0            
+       CDSCD   61.000000E-09 
+         AGS   10.000000E-21 
+       DVT1W    0            
+       DVT2W    0            
+        PRWG   32.200000E-09 
+        PRWB   68.000000E-12 
+     PDIBLCB   34.000000E-09 
+          B0  -10.000000E-21 
+      ALPHA0     .074        
+        CGSL   10.000000E-15 
+        CGDL   10.000000E-15 
+        LINT   12.000000E-09 
+        WINT    5.000000E-09 
+         DLC   12.000000E-09 
+         DWC    5.000000E-09 
+          CF  124.392700E-12 
+        NOIA    9.900001E+18 
+        NOIB    2.400000E+03 
+        NOIC    1.400000E-12 
+         VTM     .025864     
+    PARAMCHK    1            
+     VERSION    4.1          
+       PBSWG    1            
+       MJSWG     .33         
+       CJSWG  500.000000E-12 
+      ALPHA1    5.000000E-03 
+        TOXM    1.400000E-09 
+         TPB    5.000000E-03 
+         TCJ    1.000000E-03 
+       TPBSW    5.000000E-03 
+       TCJSW    1.000000E-03 
+      TPBSWG    5.000000E-03 
+      TCJSWG    1.000000E-03 
+        NOFF     .9          
+      VOFFCV     .02         
+         LLC    0            
+         LWC    0            
+        LWLC    0            
+         WLC    0            
+         WWC    0            
+        WWLC    0            
+BSIM4oxideTrapDensityC    8.750000E+09 
+    rbodyMod    1            
+    rgateMod    1            
+      igcMod    1            
+      igbMod    1            
+        toxe    1.400000E-09 
+        toxp  700.000000E-12 
+        ndep    2.800000E+18 
+       dvtp0    5.000000E-09 
+          eu    1            
+       dvtp1     .05         
+        lpe0   57.500000E-09 
+        lpeb  230.000000E-12 
+        minv     .05         
+         rsw  160            
+         rdw  160            
+      fprout     .2          
+       pdits     .2          
+      pditsd     .23         
+      pditsl    2.300000E+06 
+       agidl  200.000000E-06 
+       bgidl    2.100000E+09 
+       cgidl  200.000000E-06 
+        aigc     .69         
+        bigc    1.200000E-03 
+        cigc  800.000000E-06 
+       aigsd    8.700000E-03 
+       bigsd    1.200000E-03 
+       cigsd  800.000000E-06 
+     aigbacc     .012        
+     bigbacc    2.800000E-03 
+     cigbacc    2.000000E-03 
+     aigbinv     .014        
+     bigbinv    4.000000E-03 
+     cigbinv    4.000000E-03 
+      xrcrg2    5            
+      toxref    1.400000E-09 
+    ijthdfwd     .01         
+    ijthsfwd     .01         
+    ijthdrev    1.000000E-03 
+    ijthsrev    1.000000E-03 
+       gbmin  100.000000E-12 
+        rbdb   15            
+        rbsb   15            
+        rbpb    5            
+        rbps   15            
+        rbpd   15            
+     ckappas     .5          
+     ckappad     .5          
+       dlcig   12.000000E-09 
+         dwj    0            
+        rshg     .4          
+      CJSWGD  500.000000E-12 
+      PBSWGD    1            
+      MJSWGD     .33         
+      CJSWGS  500.000000E-12 
+      PBSWGS    1            
+      MJSWGS     .33         
+        JSWS   10.000000E-12 
+       JSWGS  100.000000E-12 
+        JSWD   10.000000E-12 
+       JSWGD  100.000000E-12 
+        coxe     .024665     
+        coxp     .049331     
+BSIM4factor1   64.807410E-06 
+
+
+WARNING(ORPSIM-15623): model P_50n: Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored
+
+WARNING(ORPSIM-15499): Mosfet M_M1, model P_50n: Toxp = 7e-010 is less than 10A
+
+WARNING(ORPSIM-15532): Acde = 0.290715 is too small
+
+WARNING(ORPSIM-15535): Mosfet M_M1, model P_50n: Leff = 2.6e-008 may be too small
+
+WARNING(ORPSIM-15536): Mosfet M_M1, model P_50n: Leff for CV = 2.6e-008 may be too small
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VDD)     .0763  (  VIN)     .0763  ( VOUT)     .0636  
+
+
+  These voltages failed to converge:
+
+    V(VOUT)                   =    67.54mV  \    63.63mV
+
+  These supply currents failed to converge:
+
+    I(V_Vin)                  =   -33.75pA  \   -41.19pA
+
+  These devices failed to converge:
+    M_M1      
+
+**** Interrupt ****
+
+          JOB ABORTED
+
+**** 07/02/13 16:14:28 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Fig10_19_PMOS-tran"  [ C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_19_PMOS\Fig10_19_pmos-pspicefiles\Fig10_19_pmos\tran
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        4.68
+

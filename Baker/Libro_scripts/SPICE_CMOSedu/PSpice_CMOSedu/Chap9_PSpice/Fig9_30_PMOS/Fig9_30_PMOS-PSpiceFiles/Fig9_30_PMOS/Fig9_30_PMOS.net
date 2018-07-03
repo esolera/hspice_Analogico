@@ -1,0 +1,7 @@
+* source FIG9_30_PMOS
+V_VBS         N04208 0 DC 0  
+V_VSG         0 N04112 DC 0  
+M_M1         N04168 N04112 0 N04208 P_50n  
++ L=100n  
++ W=5u         
+V_VSD         0 N04168 DC 1  

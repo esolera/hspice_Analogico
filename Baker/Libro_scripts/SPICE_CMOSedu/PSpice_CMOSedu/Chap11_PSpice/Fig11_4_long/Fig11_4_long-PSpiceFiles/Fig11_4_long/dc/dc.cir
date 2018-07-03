@@ -1,0 +1,20 @@
+** Profile: "Fig11_4_long-dc"  [ C:\Users\jbaker\Desktop\Chap11_PSpice\Fig11_4_long\Fig11_4_long-pspicefiles\Fig11_4_long\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig11_4_long-pspicefiles/Fig11_4_long.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_Vin 0 5 1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig11_4_long.net" 
+
+
+.END

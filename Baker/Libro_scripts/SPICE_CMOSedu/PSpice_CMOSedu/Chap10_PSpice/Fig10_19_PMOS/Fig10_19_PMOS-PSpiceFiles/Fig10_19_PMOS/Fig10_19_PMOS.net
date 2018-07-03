@@ -1,0 +1,8 @@
+* source FIG10_19_PMOS
+V_VDD         VDD 0 DC 1  
+C_C1         VOUT 0  50f  TC=0,0 
+V_Vin         VIN 0  
++PULSE 1 0 500p 0 0 1n 3n
+M_M1         VOUT 0 VIN VDD P_50n  
++ L=50n  
++ W=1u         

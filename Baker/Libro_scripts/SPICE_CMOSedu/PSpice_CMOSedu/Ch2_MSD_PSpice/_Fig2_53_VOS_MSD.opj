@@ -1,0 +1,71 @@
+(ExpressProject "_Fig2_53_VOS_MSD"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\_library_cmosedu_msd\cmosedu_msd.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\_Fig2_53_VOS_MSD.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\_Fig2_53_VOS_MSD-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File
+       ".\_Fig2_53_VOS_MSD-pspicefiles\_Fig2_53_VOS_MSD\_Fig2_53_VOS_MSD.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile
+         ".\_Fig2_53_VOS_MSD-pspicefiles\_Fig2_53_VOS_MSD\_Fig2_53_VOS_MSD.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\_Fig2_53_VOS_MSD-pspicefiles\_Fig2_53_VOS_MSD\_Fig2_53_VOS_MSD.sim"
+        (DisplayName "_Fig2_53_VOS_MSD-_Fig2_53_VOS_MSD")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (VSRC
+      (FullPartName "VSRC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Ch2_MSD_Pspice\_Fig2_53_VOS_MSD\_Fig2_53_VOS_MSD.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Ch2_MSD_Pspice\_Fig2_53_VOS_MSD\_Fig2_53_VOS_MSD.dsn"
+         "_Fig2_53_VOS_MSD")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\Ch2_MSD_Pspice\_Fig2_53_VOS_MSD\_Fig2_53_VOS_MSD.dsn"
+         "_Fig2_53_VOS_MSD" "_Fig2_53_VOS_MSD"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 336"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 1400 100 572")
+        (Scroll "-88 41")
+        (Zoom "64")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\JBAKER\DESKTOP\CH2_MSD_PSPICE\_FIG2_53_VOS_MSD\_FIG2_53_VOS_MSD.DSN")
+      (Schematic "_Fig2_53_VOS_MSD")
+      (Page "_Fig2_53_VOS_MSD")))
+  (MPSSessionName "jbaker"))

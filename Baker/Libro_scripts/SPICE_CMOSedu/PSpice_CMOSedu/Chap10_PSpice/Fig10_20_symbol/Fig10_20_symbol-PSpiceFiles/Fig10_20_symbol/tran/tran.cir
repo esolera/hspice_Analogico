@@ -1,0 +1,20 @@
+** Profile: "Fig10_20_symbol-tran"  [ C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_20_symbol\Fig10_20_symbol-pspicefiles\Fig10_20_symbol\tran.sim ] 
+
+** Creating circuit file "tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../fig10_20_symbol-pspicefiles/fig10_20_symbol.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2.5n 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig10_20_symbol.net" 
+
+
+.END

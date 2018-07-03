@@ -1,0 +1,4 @@
+* source EX8_10
+R_R1         VOUT VS  10k TC=0,0 
+G_G1         VOUT 0 VOUT 0 1e-3
+V_Vs         VS 0 DC 0 AC 1 0

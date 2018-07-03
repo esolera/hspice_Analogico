@@ -1,0 +1,48 @@
+(ExpressProject "Ex8_5"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\Ex8_5.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\Ex8_5-pspicefiles\Ex8_5\Ex8_5.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\Ex8_5-pspicefiles\Ex8_5\noise.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\Ex8_5-pspicefiles\Ex8_5\noise.sim"
+        (DisplayName "Ex8_5-noise")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_5\Ex8_5.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_5\Ex8_5.dsn"
+         "Ex8_5")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap8_PSpice\Ex8_5\Ex8_5.dsn"
+         "Ex8_5" "Ex8_5"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 431"))
+      (Tab 0)))
+  (MPSSessionName "jbaker"))

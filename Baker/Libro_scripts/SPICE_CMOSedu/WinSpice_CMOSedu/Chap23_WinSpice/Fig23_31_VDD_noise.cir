@@ -1,0 +1,56 @@
+*** Figure 23.31 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#set temp=0
+*#run
+*#set temp=25
+*#run
+*#set temp=50
+*#run
+*#set temp=75
+*#run
+*#set temp=100
+*#run
+*#plot tran1.vref tran2.vref tran3.vref tran4.vref tran5.vref
+
+.option scale=50n
+.tran 10n 10u
+
+VDD 	VDD	0	PULSE(950m 1050m 300n 100p 100p 50n 100n) 
+
+M1	vd1	vbiasp	VDD	VDD	P_50n L=2 W=20
+M2	vr	vbiasp	VDD	VDD	P_50n L=2 W=20
+M3	vref	vbiasp	VDD	VDD	P_50n L=2 W=20
+MPcap	VDD	vbiasp	VDD	VDD	P_50n L=100 W=100
+MNcap	0	vref	0	0	N_50n L=100 W=100
+
+D1	Vd1	0	PNPDIODE
+D2	vd2	0	PNPDIODE 8
+.model	PNPDIODE	D	IS=1e-18 n=1	
+
+R1	Vd1	0	489k	rmod
+Rr	Vr	vd2	52k	rmod
+R2	vr	0	489k	rmod
+RL	vref	0	208k	rmod
+.model	rmod	r	TC1=0.002
+
+Xamp	VDD	vbiasp	vr	vd1	ndiff
+
+.subckt ndiff	VDD	vout	vp	vm
+M1	vob	vp	vss	0	N_50n L=2 W=10
+M2	vout	vm	vss	0	N_50n L=2 W=10
+M3	vss	vob	0	0	N_50n L=10 W=10
+M4	vob	vob	VDD	VDD	P_50n L=2 W=20
+M5	vout	vob	VDD	VDD	P_50n L=2 W=20
+.ends
+
+**start-up circuit
+Mpu	vsu	vbiasp	VDD	VDD	P_50n L=2 W=20
+Mpd	vsu	vsu	0	0	N_50n L=100 W=10
+Ms	vd1	vsu	vbiasp	VDD	P_50n L=1 W=10
+
+.include cmosedu_models.txt
+
+.end
+   
+

@@ -1,0 +1,7 @@
+* source FIG9_34
+V_VSB         0 N03501 DC 0  
+M_M1         N03467 N03491 0 N03501 N_50n  
++ L=100n  
++ W=2.5u         
+V_VDS         N03467 0 DC 100m  
+V_VGS         N03491 0 DC 350m AC 1 

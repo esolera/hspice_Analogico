@@ -1,0 +1,115 @@
+*** Figure 29.15 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vout vin reset
+
+VDD VDD 0 5
+Vclock1 N011 0 PULSE(0 5 5n 100p 100p 4.9n 10n)
+Vin1 Vin 0 SINE(2.5 2.5 2MEG)
+XX1 N001 N003 N001 ideal_op_amp
+XX5 NC_01 NC_02 NC_03 NC_04 D0 D1 D2 D3 D4 D5 Vin VDD 0 N011 VDD ideal_10_bit_adc
+XX6 D1 D1i VDD inverter
+XX7 D0 D0i VDD inverter
+XX9 D2 D2i VDD inverter
+XX10 D5 D5i VDD inverter
+XX11 D4 D4i VDD inverter
+XX12 D3 D3i VDD inverter
+XX13 N009 0 D5i VDD switch_1
+XX14 N009 N010 D5 VDD switch_1
+XX18 N008 0 D4i VDD switch_1
+XX19 N008 N010 D4 VDD switch_1
+XX21 N007 0 D3i VDD switch_1
+XX22 N007 N010 D3 VDD switch_1
+XX27 N006 0 D2i VDD switch_1
+XX28 N006 N010 D2 VDD switch_1
+XX30 N005 0 D1i VDD switch_1
+XX31 N005 N010 D1 VDD switch_1
+XX33 N004 0 D0i VDD switch_1
+XX34 N004 N010 D0 VDD switch_1
+C1 N002 0 100f
+C2 N003 N009 400f
+C3 N003 N008 200f
+C4 N003 N007 100f
+C6 N002 N004 100f
+C10 N002 N006 400f
+C11 N002 N005 200f
+XX15 N002 0 reset VDD switch_1
+XX16 VREF 0 N010 reset VDD selectorbit
+Vref VREF 0 5
+Vreset reset 0 PULSE(5 0 100n 100p 100p 200n 400n)
+C12 N002 N003 114.3fF
+XX17 N003 0 reset VDD switch_1
+R1 N001 Vout 100
+C5 Vout 0 1p
+
+* block symbol definitions
+.subckt ideal_op_amp Vinm Vinp Out
+E1 Out 0 Vinp Vinm 1000MEG
+.ends ideal_op_amp
+
+.subckt ideal_10_bit_adc B0 B1 B2 B3 B4 B5 B6 B7 B8 B9 Vin Vrefp Vrefm Clock VDD
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+B1 VCM 0 V=(V(VREFP)-V(VREFM))/2
+BPIP PIPIN 0 V=V(OUTSH)-V(VREFM)+((V(VREFP)-V(VREFM))/2048)
+XU2 VDD Vtrip VCM N001 B7 N003 adcbit
+XU3 VDD Vtrip VCM N003 B6 N005 adcbit
+XU4 VDD Vtrip VCM N005 B5 N008 adcbit
+XU5 VDD Vtrip VCM N008 B4 N002 adcbit
+XU1 VDD Vtrip VCM N002 B3 N004 adcbit
+XU7 VDD Vtrip VCM N004 B2 N006 adcbit
+XU8 VDD Vtrip VCM N006 B1 N009 adcbit
+XU9 VDD Vtrip VCM N009 B0 NC_01 adcbit
+XU10 Vin OUTSH clock VDD sample_and_hold
+XU12 VDD Vtrip VCM PIPIN B9 N007 adcbit
+XU13 VDD Vtrip VCM N007 B8 N001 adcbit
+.ends ideal_10_bit_adc
+
+.subckt inverter In Out VDD
+S3 Out VDD N001 In switmod
+S4 0 Out In N001 switmod
+E1 N001 0 VDD 0 0.5
+.model switmod SW
+.ends inverter
+
+.subckt switch_1 P1 P2 clk VDD
+S1 P2 P1 clk Vtrip switmod
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+.model switmod SW
+.ends switch_1
+
+.subckt selectorbit BitA BitB O Select VDD
+E1 Vtrip 0 VDD 0 0.5
+S1 BitA O Vtrip Select switmod
+S2 BitB O Select Vtrip switmod
+.model switmod SW
+.ends selectorbit
+
+.subckt adcbit VDD Vtrip VCM Vin Bitout Vout
+S3 Bitout VDD Vin VCM switmod
+S4 0 Bitout VCM Vin switmod
+S5 Vout Vinh Bitout Vtrip switmod
+S6 Vinl Vout Vtrip Bitout switmod
+E1 Vinh 0 Vin VCM 2
+E2 Vinl 0 Vin 0 2
+.model switmod SW
+.ends adcbit
+
+.subckt sample_and_hold Vin Outsh Clock VDD
+S1 Vins Vinb Vtrip Clock switmod
+C1 Vins 0 1e-10
+S2 N001 Vins clock Vtrip switmod
+C2 N001 0 1e-16
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+Ebufout Outsh 0 N001 0 1
+Ebufin Vinb 0 Vin 0 1
+.model switmod SW
+.ends sample_and_hold
+
+.tran 0 1000n 0 .1n uic
+.options plotwinsize=0
+
+.END

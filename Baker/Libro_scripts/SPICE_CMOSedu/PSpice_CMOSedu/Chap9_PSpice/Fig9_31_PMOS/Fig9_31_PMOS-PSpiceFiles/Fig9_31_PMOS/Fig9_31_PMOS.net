@@ -1,0 +1,6 @@
+* source FIG9_31_PMOS
+V_VSD         0 N03731 DC 0  
+V_VSG         0 N03675 DC 350m  
+M_M1         N03731 N03675 0 0 P_50n  
++ L=100n  
++ W=5u         

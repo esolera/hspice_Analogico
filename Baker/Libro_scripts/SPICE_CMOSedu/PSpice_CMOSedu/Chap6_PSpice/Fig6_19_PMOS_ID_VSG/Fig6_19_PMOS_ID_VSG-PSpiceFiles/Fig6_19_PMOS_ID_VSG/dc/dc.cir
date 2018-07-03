@@ -1,0 +1,21 @@
+** Profile: "Fig6_19_PMOS_ID_VSG-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap6_PSpice\Fig6_19_PMOS_ID_VSG\Fig6_19_pmos_id_vsg-pspicefiles\Fig6_19_pmos_id_vsg\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig6_19_pmos_id_vsg-pspicefiles/Fig6_19_pmos_id_vsg.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_VSG 0 500m 1m 
++ LIN V_VBS 0 1 250m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig6_19_PMOS_ID_VSG.net" 
+
+
+.END

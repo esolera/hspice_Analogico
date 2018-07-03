@@ -1,0 +1,97 @@
+
+**** 06/12/13 19:41:48 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_18_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_18_MSD\_fig3_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "_Fig3_18_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1k 100meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source _FIG3_18_MSD
+V_VCM         VCM 0 DC .5  
+C_C1         VOUTP VOUTM  10p  TC=0,0 
+V_Vinp         VINP 0 DC .5Vdc AC .5Vac 
+R_U1_R2         U1_VCMB VOUTP  1G TC=0,0 
+R_U1_R1         VOUTM U1_VCMB  1G TC=0,0 
+G_U1_G1         VOUTM VOUTP VINP VINM 100u
+E_U1_E1         U1_VCMB 0 VCM 0 1
+V_Vinm         VINM 0 DC .5Vdc AC -.5Vac 
+R_U2_R2         U2_VCMB VOUTM  1G TC=0,0 
+R_U2_R1         VOUTP U2_VCMB  1G TC=0,0 
+G_U2_G1         VOUTP VOUTM VOUTP VOUTM 100u
+E_U2_E1         U2_VCMB 0 VCM 0 1
+
+**** RESUMING _Fig3_18_MSD.cir ****
+.END
+
+**** 06/12/13 19:41:48 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_18_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_18_MSD\_fig3_
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCM)     .5000  ( VINM)     .5000  ( VINP)     .5000  (VOUTM)     .5000      
+
+(VOUTP)     .5000  (U1_VCMB)     .5000                   (U2_VCMB)     .5000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VCM        0.000E+00
+    V_Vinp       0.000E+00
+    V_Vinm       0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/12/13 19:41:48 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-_Fig3_18_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch3_MSD_Pspice\_Fig3_18_MSD\_fig3_
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

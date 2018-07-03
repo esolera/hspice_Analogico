@@ -1,0 +1,7 @@
+* source TAB9_1_FTN
+V_VDS         N03542 0 DC 250m  
+V_VGS         N03536 0 DC 1.05 AC 1 
+V_VSB         0 N03612 DC 0  
+M_M1         N03542 N03536 0 N03612 N_1u  
++ L=2u  
++ W=10u         

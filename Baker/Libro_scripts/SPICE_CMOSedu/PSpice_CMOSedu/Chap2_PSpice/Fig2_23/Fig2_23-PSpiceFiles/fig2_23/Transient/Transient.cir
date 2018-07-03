@@ -1,0 +1,20 @@
+** Profile: "Fig2_23-Transient"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap2_PSpice\Fig2_23\fig2_23-pspicefiles\fig2_23\transient.sim ] 
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../Fig2_23-pspicefiles/Fig2_23.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig2_23.net" 
+
+
+.END

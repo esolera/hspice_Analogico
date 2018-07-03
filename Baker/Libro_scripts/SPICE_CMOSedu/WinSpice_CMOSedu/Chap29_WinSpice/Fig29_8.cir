@@ -1,0 +1,61 @@
+*** Figure 29.8 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vout
+
+VDD VDD 0 5
+XX1 N015 0 Vout ideal_op_amp
+R1 N015 N016 1k
+R2 N006 N010 1k
+R3 N010 N014 1k
+R4 N006 N009 1k
+R5 N009 N013 1k
+XX13 N013 0 D0i VDD switch_1
+XX14 N013 N015 D0 VDD switch_1
+XX15 N014 0 VDD VDD switch_1
+XX16 N014 0 VDD VDD switch_1
+R6 N004 N005 1k
+XX17 N006 N005 VDD VDD switch_1
+R7 N004 N008 1k
+R8 N008 N012 1k
+XX18 N012 0 D1i VDD switch_1
+XX19 N012 N015 D1 VDD switch_1
+R9 N002 N003 1k
+XX20 N004 N003 VDD VDD switch_1
+R10 N002 N007 1k
+R11 N007 N011 1k
+XX21 N011 0 D2i VDD switch_1
+XX22 N011 N015 D2 VDD switch_1
+R12 VDD N001 1k
+XX23 N002 N001 VDD VDD switch_1
+R34 N016 Vout 1k
+Vb1 D0 0 PULSE(0 5 5n 100p 100p 4.9n 10n)
+Vb2 D1 0 PULSE(0 5 10n 100p 100p 9.9n 20n)
+Vb3 D2 0 PULSE(0 5 20n 100p 100p 39.9n 80n)
+XX24 D2 D2i VDD inverter
+XX25 D1 D1i VDD inverter
+XX26 D0 D0i VDD inverter
+
+* block symbol definitions
+.subckt ideal_op_amp Vinm Vinp Out
+E1 Out 0 Vinp Vinm 1000MEG
+.ends ideal_op_amp
+
+.subckt switch_1 P1 P2 clk VDD
+S1 P2 P1 clk Vtrip switmod
+R1 Vtrip 0 100MEG
+R2 VDD Vtrip 100MEG
+.model switmod SW
+.ends switch_1
+
+.subckt inverter In Out VDD
+S3 Out VDD N001 In switmod
+S4 0 Out In N001 switmod
+E1 N001 0 VDD 0 0.5
+.model switmod SW
+.ends inverter
+
+.tran 10p 40n 10p .1n uic
+
+.end

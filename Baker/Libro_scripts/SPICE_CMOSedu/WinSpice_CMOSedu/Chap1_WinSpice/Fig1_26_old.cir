@@ -1,0 +1,13 @@
+*** Figure 1.26_old CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vin vout
+
+.tran 1n 3u 
+
+Vin	Vin	0	DC	0	SIN 0 1 1MEG
+R1	Vin	Vout	1k
+R2	Vout	0	2k
+
+.end

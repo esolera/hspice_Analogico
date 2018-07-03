@@ -1,0 +1,7 @@
+* source NOISE_PMOS_50N
+V_VSD         0 N05147 DC 500m  
+M_M1         VD N05011 0 0 P_50n  
++ L=100n  
++ W=5u         
+V_VSG         0 N05011 DC 350m AC 1 
+G_G1         VD N05147 VD N05147 1

@@ -1,0 +1,13 @@
+* source _FIG4_22_K_IS_12_FS_3_AC_MSD
+R_R2         0 N28849  50 TC=0,0 
+E_E3         N28735 N29314 N28849 0 1
+R_R1         0 N28713  50 TC=0,0 
+T_T2         N28849 0 N28731 0 Z0=50 TD=10n  
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+T_T1         VIN 0 N28713 0 Z0=50 TD=120n  
+E_E2         VOUT 0 N28741 N28735 1
+E_E1         N28741 0 VIN N28713 1
+E_E4         N29314 0 N29348 0 1
+R_R3         0 N29348  50 TC=0,0 
+T_T4         N29348 0 VOUT 0 Z0=50 TD=10n  
+T_T3         N28731 0 VOUT 0 Z0=50 TD=10n  

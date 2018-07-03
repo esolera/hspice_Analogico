@@ -1,0 +1,39 @@
+*** Figure 11.21 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#run
+*#plot vin vout
+
+.option scale=50n
+.tran 10p 3n
+**.dc vp 0 1 1m
+
+vdd	vdd	0	DC	1
+vp	vp	0	DC	0	pulse 0 1 100p 0 0 1n 2n
+
+M11	vin	vp	0	0	N_50n L=1 W=10	
+M21	vin	vp	vdd	vdd	P_50n L=1 W=20
+
+M12	v2	vin	0	0	N_50n L=1 W=80	
+M22	v2	vin	vdd	vdd	P_50n L=1 W=160
+
+M13	v3	v2	0	0	N_50n L=1 W=640	NRD=0 NRS=0
+M23	v3	v2	vdd	vdd	P_50n L=1 W=1280 NRD=0 NRS=0
+
+* For wide MOSFETs set NRD and NRS to zero, see page 813 of the book or
+* page A-10 of the BSIM4 manual
+
+M14	v4	v3	0	0	N_50n L=1 W=5120  NRD=0 NRS=0
+M24	v4	v3	vdd	vdd	P_50n L=1 W=10240 NRD=0 NRS=0
+
+M15	vout	v4	0	0	N_50n L=1 W=40960 NRD=0 NRS=0
+M25	vout	v4	vdd	vdd	P_50n L=1 W=81920 NRD=0 NRS=0
+
+CL	Vout	0	20p
+
+
+.include cmosedu_models.txt 
+
+.end
+   
+

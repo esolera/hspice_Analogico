@@ -1,0 +1,7 @@
+* source FIG6_13
+M_M1         N02400 N02432 0 N02905 N_1u  
++ L=1u  
++ W=10u         
+V_VGS         N02432 0 DC 0  
+V_VDS         N02400 0 DC 5  
+V_VSB         0 N02905 DC 0  

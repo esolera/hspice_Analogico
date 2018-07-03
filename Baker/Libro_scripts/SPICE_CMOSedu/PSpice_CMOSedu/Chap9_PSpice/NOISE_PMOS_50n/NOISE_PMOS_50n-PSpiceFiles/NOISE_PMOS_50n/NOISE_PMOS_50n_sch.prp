@@ -1,0 +1,125 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VSRC")
+        ("MbreakP4")
+        ("G")
+    )
+    ("instances"
+        ("VSD"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_VSD")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"500m")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-5.680uW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("TRAN"
+                    ("value"	"")
+                    ("pspice_param"	"TRAN")
+                )
+            )
+        )
+        ("M1"
+            ("device_name"	"MbreakP4")
+            ("pspice_path"	"M_M1")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"5.680uW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("W"
+                    ("value"	"5u")
+                    ("pspice_param"	"W")
+                )
+                ("L"
+                    ("value"	"100n")
+                    ("pspice_param"	"L")
+                )
+                ("AD"
+                    ("value"	"")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+            )
+        )
+        ("VSG"
+            ("device_name"	"VSRC")
+            ("pspice_path"	"V_VSG")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"350m")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"1")
+                    ("pspice_param"	"AC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-384.1pW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("TRAN"
+                    ("value"	"")
+                    ("pspice_param"	"TRAN")
+                )
+            )
+        )
+        ("G1"
+            ("device_name"	"G")
+            ("pspice_path"	"G_G1")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"129.0pW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("GAIN"
+                    ("value"	"1")
+                    ("pspice_param"	"GAIN")
+                )
+            )
+        )
+    )
+)

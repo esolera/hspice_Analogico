@@ -1,0 +1,60 @@
+(ExpressProject "Fig10_20_symbol"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\Fig10_20_symbol.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\fig10_20_symbol-pspicefiles\fig10_20_symbol\fig10_20_symbol.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\Fig10_20_symbol-pspicefiles\Fig10_20_symbol\tran.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\Fig10_20_symbol-pspicefiles\Fig10_20_symbol\tran.sim"
+        (DisplayName "Fig10_20_symbol-tran")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\fig10_20_symbol-pspicefiles\fig10_20_symbol.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\fig10_20_symbol-pspicefiles\fig10_20_symbol.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_20_symbol\Fig10_20_symbol.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_20_symbol\Fig10_20_symbol.dsn"
+         "Fig10_20_symbol")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\Chap10_PSpice\Fig10_20_symbol\Fig10_20_symbol.dsn"
+         "TG_20_10"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 415"))
+      (Tab 0)))
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "jbaker"))

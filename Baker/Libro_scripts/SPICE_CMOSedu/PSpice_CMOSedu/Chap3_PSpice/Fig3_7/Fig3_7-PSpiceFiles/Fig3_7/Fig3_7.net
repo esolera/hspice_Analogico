@@ -1,0 +1,5 @@
+* source FIG3_7
+V_Vin         VIN 0  
++PULSE 0 1 50p 
+R_Rload         0 VOUT  1G TC=0,0 
+X_TRC         VIN VOUT 0 TLUMP128 PARAMS: LEN=5000 R=0.1 L=0 G=0 C=32e-18

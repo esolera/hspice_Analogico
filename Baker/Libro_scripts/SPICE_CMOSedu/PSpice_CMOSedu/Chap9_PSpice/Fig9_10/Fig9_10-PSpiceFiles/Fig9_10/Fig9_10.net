@@ -1,0 +1,16 @@
+* source FIG9_10
+M_M1         N02644 N02644 0 0 N_1u  
++ L=1u  
++ W=10u         
+M_M2         VD2 N02644 0 0 N_1u  
++ L=1u  
++ W=10u         
+V_VDD         N02627 0 DC 5  
+I_Injected         0 VD2 DC 0  
+I_Ibias         N02627 VG4 DC 1u  
+M_M3         VG4 VG4 N02644 0 N_1u  
++ L=1u  
++ W=10u         
+M_M4         N02627 VG4 VD2 0 N_1u  
++ L=1u  
++ W=10u         

@@ -1,0 +1,18 @@
+** Profile: "SCHEMATIC1-_Fig2_52_MSD"  [ C:\Users\HomePC\Documents\Spring 2013\PSpice_CMOSedu\MSD\Ch2_MSD_Pspice\_Fig2_52_MSD\_fig2_52_msd-pspicefiles\schematic1\_fig2_52_msd.sim ] 
+
+** Creating circuit file "_Fig2_52_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500ns 0 .01n SKIPBP 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

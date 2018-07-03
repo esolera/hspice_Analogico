@@ -1,0 +1,9 @@
+* source _FIG4_22_K_IS_8_FS_4_AC_MSD
+R_R2         0 N28024  50 TC=0,0 
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+E_E1         N27906 0 VIN N27880 1
+E_E3         N27916 0 N28024 0 1
+R_R1         0 N27880  50 TC=0,0 
+T_T1         VIN 0 N27880 0 Z0=50 TD=80n  
+E_E2         VOUT 0 N27906 N27916 1
+T_T2         N28024 0 VOUT 0 Z0=50 TD=20n  

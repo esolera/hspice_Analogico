@@ -1,0 +1,7 @@
+* source FIG6_19_NMOS_ID_VGS
+M_M1         N02400 N02432 0 N03240 N_50n  
++ L=50n  
++ W=500n         
+V_VGS         N02432 0 DC 0  
+V_VDS         N02400 0 DC 1  
+V_VSB         0 N03240 DC 0  

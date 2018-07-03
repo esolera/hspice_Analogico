@@ -1,0 +1,19 @@
+** Profile: "_Fig1_20_AC_MSD-_Fig1_20_AC_MSD"  [ C:\Users\jbaker\Desktop\Ch1_MSD_PSpice\_Fig1_20_AC_MSD\_fig1_20_ac_msd-pspicefiles\_fig1_20_ac_msd\_fig1_20_ac_msd.sim ] 
+
+** Creating circuit file "_Fig1_20_AC_MSD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 1k 200MEG
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\_Fig1_20_AC_MSD.net" 
+
+
+.END

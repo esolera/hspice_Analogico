@@ -1,0 +1,6 @@
+* source FIG1_13
+E_E1         VT VB VIN 0 23
+R_R1         VT VOUT  1k TC=0,0 
+R_R2         0 VB  3k TC=0,0 
+R_R3         0 VOUT  2k TC=0,0 
+V_Vin         VIN 0 DC 1V  

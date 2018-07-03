@@ -1,0 +1,26 @@
+*** Figure 5.2 CMOS: Circuit Design, Layout, and Simulation ***
+
+*#destroy all
+*#set temp=0
+*#run
+*#set temp=27
+*#run
+*#set temp=100
+*#run
+*#let iref0=-dc1.i(vr)
+*#let iref27=-dc2.i(vr)
+*#let iref100=-dc3.i(vr)
+*#let r0=vr/iref0
+*#let r27=vr/iref27
+*#let r100=vr/iref100
+*#plot r0 r27 r100
+
+.dc Vr 0.9 1.1 1m
+
+vr	vr	0	DC	0
+
+r1	vr	0	rmod	L=100 W=5
+
+.model rmod R RSH=500 TNOM=27 TC1=0.0024	
+
+.end

@@ -1,0 +1,4 @@
+* PSpice Model Editor - Version 16.6.0
+*$
+.model Diode D Rs=0 TT=10n 
+*$

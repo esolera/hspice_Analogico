@@ -1,0 +1,57 @@
+
+**** 06/29/13 10:14:46 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig1_16-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_16\Fig1_16-pspicefiles\Fig1_16\dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_Vin 0 1 1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fig1_16.net" 
+
+
+
+**** INCLUDING Fig1_16.net ****
+* source FIG1_16
+V_Vin         VIN 0 DC 1  
+R_R1         VIN VOUT  1k TC=0,0 
+R_R2         0 VOUT  2k TC=0,0 
+
+**** RESUMING dc.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+**** 06/29/13 10:14:46 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Fig1_16-dc"  [ C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_16\Fig1_16-pspicefiles\Fig1_16\dc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

@@ -1,0 +1,64 @@
+(ExpressProject "Fig1_14"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File "Fig1_14.dsn"
+      (Type "Schematic Design")
+      (DisplayName ".\Fig1_14.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "TRUE"))
+  (Folder "Outputs"
+    (File ".\fig1_14-pspicefiles\fig1_14\fig1_14.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\Fig1_14-pspicefiles\Fig1_14\tf.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\Fig1_14-pspicefiles\Fig1_14\tf.sim"
+        (DisplayName "Fig1_14-tf")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (GPOLY
+      (FullPartName "GPOLY.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSRC
+      (FullPartName "VSRC.Normal")
+      (LibraryName "D:\ORCAD\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "jbaker")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_14\Fig1_14.dsn")
+      (Path "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_14\Fig1_14.dsn"
+         "Fig1_14")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\jbaker\Desktop\PSpice_CMOSedu\Chap1_PSpice\Fig1_14\Fig1_14.dsn"
+         "Fig1_14" "Fig1_14"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 431"))
+      (Tab 0))))

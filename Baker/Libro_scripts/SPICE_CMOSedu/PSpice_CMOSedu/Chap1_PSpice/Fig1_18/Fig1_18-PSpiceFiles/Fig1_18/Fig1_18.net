@@ -1,0 +1,4 @@
+* source FIG1_18
+I_Ib         0 VB DC 0  
+V_V1         VCE 0 DC 0  
+Q_Q1         VCE VB 0 myNPN 

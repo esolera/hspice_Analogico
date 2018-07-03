@@ -1,0 +1,5 @@
+* source FIG2_23
+V_V1         N03829 0  
++PULSE 0 1 5n 10p 
+R_R1         0 N03825  1G TC=0,0 
+T_T2         N03829 0 N03825 0 LEN=50 R=5000 L=0 G=0 C=0

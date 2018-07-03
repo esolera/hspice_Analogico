@@ -1,0 +1,21 @@
+* source FIG12_5
+M_M3         VOUT VIN 0 0 N_1u  
++ L=1u  
++ W=10u         
+V_VDD         VDD 0 DC 5  
+M_M5         N04224 VIN N04220 VDD P_1u  
++ L=1u  
++ W=10u         
+M_M4         VOUT VIN N04224 VDD P_1u  
++ L=1u  
++ W=10u         
+V_Vin         VIN 0 DC 0  
+M_M1         VOUT VIN 0 0 N_1u  
++ L=1u  
++ W=10u         
+M_M6         N04220 VIN VDD VDD P_1u  
++ L=1u  
++ W=10u         
+M_M2         VOUT VIN 0 0 N_1u  
++ L=1u  
++ W=10u         

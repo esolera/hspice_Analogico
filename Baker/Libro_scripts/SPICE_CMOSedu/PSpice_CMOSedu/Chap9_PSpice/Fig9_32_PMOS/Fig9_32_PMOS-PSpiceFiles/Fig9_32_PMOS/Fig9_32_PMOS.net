@@ -1,0 +1,6 @@
+* source FIG9_32_PMOS
+V_VSG         0 N03925 DC 350m  
+M_M1         N03987 N03925 0 0 P_50n  
++ L=100n  
++ W=5u         
+V_VSD         0 N03987 DC 0  

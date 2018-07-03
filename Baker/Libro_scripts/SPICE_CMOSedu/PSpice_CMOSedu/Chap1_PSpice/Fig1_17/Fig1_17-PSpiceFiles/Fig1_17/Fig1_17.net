@@ -1,0 +1,4 @@
+* source FIG1_17
+V_Vin         VIN 0 DC 1  
+R_R1         VIN VD  1k TC=0,0 
+D_D1         VD 0 mydiode 
